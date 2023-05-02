@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Enemy
+  - Gem
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2011222073
+    locked: 0
+  - name: Middleground
+    uniqueID: 1973948505
+    locked: 0
+  - name: Foreground
+    uniqueID: 2527328965
+    locked: 0
+  - name: Player
+    uniqueID: 1794200759
     locked: 0
