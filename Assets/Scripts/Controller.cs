@@ -15,6 +15,9 @@ public class Controller : MonoBehaviour
 
     private GameManager gameManager;
 
+    private bool colidingChest = false;
+    private GameObject chest;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,14 @@ public class Controller : MonoBehaviour
 
         if (Input.GetButton("Jump") && IsGrounded())
             Jump();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (colidingChest)
+            {
+                chest.GetComponent<Chest>().Open();
+            }
+        }
     }
 
     private void Move()
@@ -40,7 +51,7 @@ public class Controller : MonoBehaviour
         {
             spr.flipX = true;
             anim.SetBool("isMoving", true);
-        } else if(horizontalInput == 1)
+        } else if (horizontalInput == 1)
         {
             spr.flipX = false;
             anim.SetBool("isMoving", true);
@@ -65,25 +76,21 @@ public class Controller : MonoBehaviour
         return false;
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Chest"))
+        {
+            colidingChest = false;
+            chest = null;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Chest"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                collision.gameObject.GetComponent<Chest>().Open();
-            }
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Chest"))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                collision.gameObject.GetComponent<Chest>().Open();
-            }
+            colidingChest = true;
+            chest = collision.gameObject;
         }
     }
 

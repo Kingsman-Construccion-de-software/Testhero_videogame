@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06651592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 1.203125}
+  m_Size: {x: 3.5, y: 1.3361568}
   m_EdgeRadius: 0
 --- !u!114 &7480181164245770326
 MonoBehaviour:
@@ -128,6 +128,6 @@ MonoBehaviour:
   openAnimation: {fileID: 2055451437839278826, guid: 73c8aa3ae5f302540a2f8e6bc1b3898d, type: 3}
   treasure: {fileID: -873809270, guid: 130e79f4edee7334283b55260b0a1a56, type: 3}
   empty: {fileID: -531861774, guid: 130e79f4edee7334283b55260b0a1a56, type: 3}
-  correctAnswer: 0
+  correctAnswer: 1
   gem: {fileID: 8181606994936765673, guid: 646c0aac230bd3847a34a17ebf7c6e12, type: 3}
   skull: {fileID: 4478155499532336805, guid: 6e63e2c2d137ca9429a793c3bf668839, type: 3}
