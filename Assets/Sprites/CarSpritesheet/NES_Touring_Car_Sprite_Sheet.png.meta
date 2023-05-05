@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -3636,11 +3636,11 @@ TextureImporter:
       NES_Touring_Car_Sprite_Sheet_106: 2012504821
       NES_Touring_Car_Sprite_Sheet_33: -1342837459
       NES_Touring_Car_Sprite_Sheet_156: 360782127
-      NES_Touring_Car_Sprite_Sheet_161: -682749733
       NES_Touring_Car_Sprite_Sheet_45: 1015672890
+      NES_Touring_Car_Sprite_Sheet_50: -763405560
       NES_Touring_Car_Sprite_Sheet_128: -698876443
       NES_Touring_Car_Sprite_Sheet_140: 1404073720
-      NES_Touring_Car_Sprite_Sheet_50: -763405560
+      NES_Touring_Car_Sprite_Sheet_161: -682749733
       NES_Touring_Car_Sprite_Sheet_47: 313475936
       NES_Touring_Car_Sprite_Sheet_41: 2145594953
       NES_Touring_Car_Sprite_Sheet_46: -98098284
