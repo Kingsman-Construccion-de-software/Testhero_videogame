@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 82
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -269,7 +269,7 @@ TextureImporter:
         serializedVersion: 2
         x: 129
         y: 120
-        width: 28
+        width: 7
         height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -288,9 +288,9 @@ TextureImporter:
       name: Minifantasy_DungeonProps_8
       rect:
         serializedVersion: 2
-        x: 162
+        x: 189
         y: 120
-        width: 37
+        width: 10
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -458,7 +458,7 @@ TextureImporter:
         serializedVersion: 2
         x: 104
         y: 97
-        width: 32
+        width: 8
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -584,8 +584,8 @@ TextureImporter:
         serializedVersion: 2
         x: 177
         y: 97
-        width: 16
-        height: 11
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1166,6 +1166,216 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_50
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 97
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399082e55ba71474f98ac91509fc5555
+      internalID: 627725841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_51
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 97
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5936226e6a4a04bb1adaaa97a41432
+      internalID: -1480329181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 97
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310067f27253f374abd98a9599bb448a
+      internalID: -1775601861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_53
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 120
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b1938c2efd2b8468164749404a1625
+      internalID: 1079183660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 121
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a819d3a279c4642b6a38baaedfeb96
+      internalID: 985754176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_55
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 123
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c8baf979b9d43429f7289fa7660c33
+      internalID: -1803329344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_56
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 122
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74851b3e9139c79419e8235c3295c0ad
+      internalID: 985714860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_57
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 123
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908a0ed57ab31724ea39df3faa4f80e1
+      internalID: -1843057122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_58
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 123
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc5bae84c1823f4194fe9f24045d309
+      internalID: 1032088151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_DungeonProps_59
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 98
+        width: 3
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65663d6b0f703394b827fe65dd6cc9b8
+      internalID: -513691164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1178,6 +1388,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Minifantasy_DungeonProps_32: 392456853
+      Minifantasy_DungeonProps_52: -1775601861
       Minifantasy_DungeonProps_34: 1950416100
       Minifantasy_DungeonProps_1: -839560753
       Minifantasy_DungeonProps_44: -1808403455
@@ -1192,7 +1403,9 @@ TextureImporter:
       Minifantasy_DungeonProps_22: -1136455810
       Minifantasy_DungeonProps_31: 355046096
       Minifantasy_DungeonProps_8: -997981282
+      Minifantasy_DungeonProps_57: -732872050
       Minifantasy_DungeonProps_46: 1689093411
+      Minifantasy_DungeonProps_54: 1079183660
       Minifantasy_DungeonProps_13: 1945533813
       Minifantasy_DungeonProps_49: -1853179699
       Minifantasy_DungeonProps_24: -1786920686
@@ -1201,27 +1414,34 @@ TextureImporter:
       Minifantasy_DungeonProps_41: -357841242
       Minifantasy_DungeonProps_14: 1464787588
       Minifantasy_DungeonProps_30: -1072586538
-      Minifantasy_DungeonProps_9: -793802240
-      Minifantasy_DungeonProps_39: 557787561
-      Minifantasy_DungeonProps_19: -1748399891
       Minifantasy_DungeonProps_43: 1500293719
+      Minifantasy_DungeonProps_9: -793802240
+      Minifantasy_DungeonProps_56: -1803329344
+      Minifantasy_DungeonProps_39: 557787561
       Minifantasy_DungeonProps_2: 640250828
       Minifantasy_DungeonProps_36: 705440084
+      Minifantasy_DungeonProps_19: -1748399891
       Minifantasy_DungeonProps_16: 785985006
       Minifantasy_DungeonProps_33: -1356451697
+      Minifantasy_DungeonProps_53: -827810772
       Minifantasy_DungeonProps_5: 1540003332
       Minifantasy_DungeonProps_47: -1590425081
       Minifantasy_DungeonProps_26: 1754475939
+      Minifantasy_DungeonProps_58: 985714860
       Minifantasy_DungeonProps_12: -16428161
       Minifantasy_DungeonProps_11: 887328516
       Minifantasy_DungeonProps_18: 477077377
       Minifantasy_DungeonProps_21: -617138000
       Minifantasy_DungeonProps_25: 292785492
       Minifantasy_DungeonProps_37: 1124095444
+      Minifantasy_DungeonProps_59: -1843057122
       Minifantasy_DungeonProps_45: -882658871
       Minifantasy_DungeonProps_23: -333902706
+      Minifantasy_DungeonProps_55: 985754176
+      Minifantasy_DungeonProps_50: 627725841
       Minifantasy_DungeonProps_48: 692110868
       Minifantasy_DungeonProps_4: 936878827
+      Minifantasy_DungeonProps_51: -1480329181
       Minifantasy_DungeonProps_15: 538211925
       Minifantasy_DungeonProps_27: -1793784871
       Minifantasy_DungeonProps_7: -327995036
