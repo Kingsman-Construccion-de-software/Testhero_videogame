@@ -47,7 +47,9 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Feedback");
             } else if(name == "Results")
             {
-                SceneManager.LoadScene("Final");
+                SceneManager.LoadScene("Ranking");
+            } else if(name == "Ranking"){
+                 SceneManager.LoadScene("Final");
             }
         }
 
