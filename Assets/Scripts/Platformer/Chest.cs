@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chest : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Chest : MonoBehaviour
     [SerializeField] private bool correctAnswer;
     [SerializeField] private GameObject gem;
     [SerializeField] private GameObject skull;
+
+    [SerializeField] private GameManager gameManager;
 
 
     private void Start()
@@ -75,6 +78,7 @@ public class Chest : MonoBehaviour
         {
             Instantiate(skull, position, Quaternion.identity);
         }
+        Invoke("ChangeScene", 1f);
     }
 
 }
