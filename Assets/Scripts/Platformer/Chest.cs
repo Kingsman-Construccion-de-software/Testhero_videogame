@@ -78,7 +78,6 @@ public class Chest : MonoBehaviour
         {
             Instantiate(skull, position, Quaternion.identity);
         }
-        Invoke("ChangeScene", 1f);
     }
 
 }

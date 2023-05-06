@@ -45,7 +45,9 @@ public class GameManager : MonoBehaviour
             } else if (games.Contains(name))
             {
                 SceneManager.LoadScene("Feedback");
-
+            } else if(name == "Results")
+            {
+                SceneManager.LoadScene("Final");
             }
         }
 
