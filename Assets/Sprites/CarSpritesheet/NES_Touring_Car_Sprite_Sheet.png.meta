@@ -1,0 +1,3731 @@
+fileFormatVersion: 2
+guid: f884645f5e9a6654cb5cdff4467cbf0d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Car_SpriteSheet
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 585
+        width: 61
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930488aa3d38c214fba2faa75353f621
+      internalID: -882456008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 585
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7178cfb99de4d534d8d62f62e4b9df9a
+      internalID: -496939947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 585
+        width: 49
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58edacf8aa0fa414b9c4043fb9daa425
+      internalID: -1233257473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 585
+        width: 46
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2c852b68809454ea22d4c75e8dab8e
+      internalID: -388104667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 559
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e4696d45e12a149a74fc396f0da38b
+      internalID: 107178160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 503
+        width: 97
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c1b97ac56373e4986ece2b431089c6
+      internalID: -1075511425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 505
+        width: 92
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0612262153d4c4a90d47a405cdff65
+      internalID: 1152949661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 548
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9202d8b94823a34380b2b89f1319f3c
+      internalID: -2139167181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 505
+        width: 92
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3d083398d513242b676450949b9ad9
+      internalID: 683099565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 514
+        width: 13
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e4b3137473be2429312de8f7e5a1c2
+      internalID: 2028451669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 545
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1953ebb70da5046ac3f25091a755ee
+      internalID: -1663988218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 548
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ecd4921afac8148b6a169a79e9efb1
+      internalID: 1243718975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 518
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4c1225357276b428fc58c06c9e0b25
+      internalID: -4240715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 530
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8d3c32ab317fa468378171066e65c3
+      internalID: 564353509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 504
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca438ee67c3d314d8d49e974a8fd077
+      internalID: 333354439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 488
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b91d35a07da21a44a6f6c37e76a5008
+      internalID: -681483825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 434
+        width: 13
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9017f0172771114fbacef7c5d479a60
+      internalID: -1613260353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 449
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d808ab4c6276be247bbcd4b91ce90b3b
+      internalID: -1087811035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 449
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9683f7b37b6831429bb43bc5075e5c4
+      internalID: -1933364013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 433
+        width: 192
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2b16459d4597c45ae9167585e66303
+      internalID: -1128786136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 425
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d0aa9774b1ad3439edfcaee8f0fdc1
+      internalID: -1541672857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 400
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a7284bd034fb347a41ebb6497f7b34
+      internalID: -1094723649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 400
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c678556f6185b4aaa287e0177a1174
+      internalID: -1042149622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 400
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4032ccd0238f3488111575aa6e843d
+      internalID: -308996867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac4bc992c74f5e48a1279fe15f5bba8
+      internalID: 1620890768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 400
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7c5ef7b726ad641925a9dd435f9cd0
+      internalID: 986364935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 400
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe41bd551478e445bf70e256c7e8300
+      internalID: 734871903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 339
+        width: 13
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0979f6f1ea3689c498da4e22471c0962
+      internalID: 1534542423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 378
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4c1b96f4fd67f49b1abe916586d3de
+      internalID: -1792426526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 378
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d87abac411d70743a35bc27f1ef0c78
+      internalID: -1771153343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 378
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d974b0b68d6e5a47b7964e1560f6e64
+      internalID: -877987208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 378
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20397b8954e8d6e4a8f248f027b16be4
+      internalID: -475343881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 378
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553dd3786039bdb42b07f84590000e68
+      internalID: -1582056820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 378
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f769e11e718994d93cbab522cd46de
+      internalID: -1342837459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 378
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278ad550a32ae6a49adab8d147a7d6d4
+      internalID: 764487217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 378
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5befb286bc51074090f178b1b9215a9
+      internalID: -1558076309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 378
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3795391a26be3854799410a87df25e70
+      internalID: 2010440633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 355
+        width: 38
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ab66ecf1f8a904e862e20f4aea2149
+      internalID: 505390372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 355
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588308e09b1b4864995a7ae058f29c23
+      internalID: 961681416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 355
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5adfe436b0e544cb18082d388f0cf9
+      internalID: -1551374483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 355
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ef2d8b976bb2e45b6d7c5f55db1725
+      internalID: -1751413279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 355
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086457a941c20fd4ebefae8dbbe2452d
+      internalID: 2145594953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 355
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413d800650f2e204f846fe4bb36f64c8
+      internalID: -1830737119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 355
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ae12fac1accb34f8a6fb2e0cf2e593
+      internalID: 2142761888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 355
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff24914c1a0e34458c322d4205fd7c7
+      internalID: -509527956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 355
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117fec61a6b8d5f4e87102f5bbdc51f8
+      internalID: 1015672890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 336
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4ffc4aa2619dd41a6a4b53b97e07e5
+      internalID: -98098284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 336
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46396976284b86843a94be3c9f2bbd0c
+      internalID: 313475936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 336
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af6b994884ca4e4c90ea1fb7a9c9979
+      internalID: -1820091212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 336
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5878dfc666412fd459bbd6d39ef12b9e
+      internalID: -1269819137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 336
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691b8976b6c13d94ab4846fd74394a7a
+      internalID: -763405560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 336
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3786ef537697a48a0b11f982ab6037
+      internalID: 1731421868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 336
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede8410fa5a5b2d49ae6c57d65051ab8
+      internalID: -133796137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 336
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44a580104e28214bbb3430bc4ecd446
+      internalID: -1194386591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 336
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae00c10fcf3644408cebc3b781a0cfa
+      internalID: 529593171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 305
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6a0693a76fc6547917835d75b822d5
+      internalID: 109543633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 320
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cafc9238dbbfcd4c828f05d409b5583
+      internalID: -1305706104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 320
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51915f88a509db7499f7689cc84de3a6
+      internalID: 1303485906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 320
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d379b67c7d2d524aaf1b6f87cd623b3
+      internalID: -866226596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 320
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7590a119f05fe14fa93de2f670e701d
+      internalID: 2143584565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 320
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575d51a0a2f68344a9995a7f29a95fdd
+      internalID: -1744463917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 320
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab4414930abe634987f23e1d33db5b2
+      internalID: 1476031460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 320
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7cb273b8aeb7f43ab5c46af686a618
+      internalID: -1588337787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 320
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff0c5dab68ff3b459d28c7efdd71e9f
+      internalID: -552048173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 320
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4593bd2d6218fa546aa746b20c321b10
+      internalID: -230432148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 305
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc24d5422d826e74580311ddb95024fe
+      internalID: 912337961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 305
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24e9f2740d602f4e9aadb3025f58c71
+      internalID: 1740008371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 305
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a758e1aa22887444e990d6843eac4383
+      internalID: 455295253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 305
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61538790dd535234eb935bc4a0e18e66
+      internalID: 253816719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 305
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba872ecf43f7bc40a25b2047fd504ff
+      internalID: -1401704818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 305
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834dfd191222d9344ac232bdaccbae9b
+      internalID: -1599112505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 305
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78cf8f55c9e66a4ea27e202cca7d212
+      internalID: 190987292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 305
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5195620b08c0ecd40bbfad9f4f695ed4
+      internalID: -845470339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 305
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42efa7bfd167b2e4b81aae51cb78ba04
+      internalID: -1694352230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 264
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d028c2885ea8a4a9fd0cc0e19c845e
+      internalID: -1580658255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 272
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b0ebfb7cc588449853766b9ae851e1
+      internalID: 1524147848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 272
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3006664d4799ea46a9a55ee2e06b9a1
+      internalID: 1714509527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 272
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd32145ad2e871d4aa5271249163df9f
+      internalID: -1669495710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 272
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab1176c578ecf844a9fa6c23df7c83f
+      internalID: -536387190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 272
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf081635dd1a638478d346c808ac0124
+      internalID: 1118405081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 218
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fc809063794644995483c5b19c6060
+      internalID: -852722566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 244
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b9e34e8b5292248a29c1c21696f8dc
+      internalID: -1891437108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 244
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602c6cb2867cc6c4c80c00881ca28e96
+      internalID: -1607063749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 244
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2a6d520be1d7745a668c0ffc030566
+      internalID: -279179027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 244
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65162a3b96b790543a1081051ac1221c
+      internalID: -1557452183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 244
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036ca2589952ee74fb86ce2ae31c9bdf
+      internalID: -1776202276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 244
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b3b24c05689c148bf9244ac91d51ba
+      internalID: -270827058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 244
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7cf12d0a5d8ef40ab6472b086ae372
+      internalID: -295700095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 244
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5896fcb6b40e5345b086dcb9481ba07
+      internalID: 1552006536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 244
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ffa0bbac8c53b499a7b57f1894c34f
+      internalID: 1296112833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 222
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be3d163798dd3745af1f5e42835bfae
+      internalID: 826551501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 222
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa243cd39b17b0b41ade8b3c9eb9931a
+      internalID: -947238018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 222
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e039acadb1efa499a3142d801e4c7f
+      internalID: -1130302688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 222
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d64c118c49ab44f9bf934c574a763a
+      internalID: 1841300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 222
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1618e02ab798b884682c11c1434c9f41
+      internalID: -1410433652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 222
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf28f0f92cd008428b970e2d6354945
+      internalID: -98355575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 222
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95d85fccd06b8744a30b747b4387b74
+      internalID: -199854006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 222
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb7dcdf25a82a14f92c38302fd721f0
+      internalID: -530312450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 222
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb6ad22062595e4bbfc6aefd88fdbb2
+      internalID: 1473341262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 185
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f79671b00e8db40afd0545a0db280b
+      internalID: 320937724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 201
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f021ef95de4c6645afdde5c1c6039d0
+      internalID: 424943999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 201
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc72528b70afcf74c9e312167f6cdf53
+      internalID: 977338869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 201
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb02ac70b06ca9a418468dd0eecdfefe
+      internalID: -599088442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 201
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b6917a53ac3b24a8345f6fd14db964
+      internalID: -1064275506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 201
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e6ef197d91cf048a054ba982947a2f
+      internalID: -884584566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 201
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1776fec2a0accc24e9bf45626377b97d
+      internalID: -1759774873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 201
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c346ea38d622a0d44b2996b6071440bb
+      internalID: 2012504821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 201
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9427d9b237928a24ba9813d07afa0c9d
+      internalID: 141927366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 201
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2393bbcde1c435d41b748b4ea6c4be3c
+      internalID: 265036379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 185
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7481e81cf1af444ac6180ef5007f54
+      internalID: 917357973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 185
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cacde819e99bc048957b23a64e04dbb
+      internalID: 995856272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 185
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6cc401c76162d74da7c33ca1aafbd7f
+      internalID: -2122122530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 185
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6361b82fe4002cd45aa50d39a0c73c44
+      internalID: -1642386917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 185
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159d5549242c8b64ea22a955461ee17b
+      internalID: -1408654915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 185
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f34b6ef81ba9646877295de3c76f11
+      internalID: 415078690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 185
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a7b10e8a8700641b2e97fcd9e4e596
+      internalID: -1936945773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 185
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94ea50ab040087449e2afe64366e823
+      internalID: -731113308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 185
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dda9078ebd4754bb09b7ff7506ec0c
+      internalID: -361868361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 161
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480e59cb589eb4948b331f016025deea
+      internalID: 1565297671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 144
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7038939dc9b1d7b41becea346b53e6e7
+      internalID: -1414989804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 147
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6311f67953a284c86819032f8b06ea
+      internalID: 1189915732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 113
+        width: 13
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd29a405e004c4a47ad716d5bce0f6a6
+      internalID: -684777395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 104
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369f076589fc44342a6dd4733eaf653b
+      internalID: -1646924898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 107
+        width: 48
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076c0f27835962445989ed5caa8bb00d
+      internalID: 1580665203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 107
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d36039fa2f7534ba1a6c7a9fd9cdbb
+      internalID: 64565183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 105
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2def7f872b2e4b43a1780fc9a673d3d
+      internalID: 1178233112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 89
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324db0739e1649442a9184c691189465
+      internalID: -2016434691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73ddf695fc1e2f4d97a49c0887228ee
+      internalID: 1267535814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 14
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2266016be8185114ca5e5c07d8be17ff
+      internalID: -698876443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60462322d0d26b94a9c2afe764936d2a
+      internalID: -2074920545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5613dfe718db842b5a148641fc0387
+      internalID: -1425479375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 61
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8414b3fad6bbbd64c984b815601cf9eb
+      internalID: -75898369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 61
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d4353d91af75f47b9bd5fc30fccb37
+      internalID: -335161170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 61
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47078f2f59eaba4bb07c15dec58d16d
+      internalID: 79163416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 61
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24ce5f6589e37e4bbfe056708084e12
+      internalID: 1153684806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 61
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2803561caa4e934881ddb149adae7bc
+      internalID: -1940120305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 61
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fef3de41f794744956c96327173eed
+      internalID: -980490456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 61
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0256c35970aedcc48ae556f9fa1ec15e
+      internalID: 1281021208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_138
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 61
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55b84d068428be4cae4b4899f71013e
+      internalID: -1546430715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_139
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 16
+        width: 117
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c37c76fe7998842b98cd09159a5147
+      internalID: 992703071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_140
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b81d3d511bcf7d4fbf399142dd7509a
+      internalID: 1404073720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_141
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 32
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf07ac321ad9924cb022b612c49344d
+      internalID: -280340374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_142
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 25
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf597e0b23657647bcbe4f291301e3a
+      internalID: 82755555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_143
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 272
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5baf978df94028a4bbd728755b1b085a
+      internalID: 883400252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_144
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 272
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01a2eab99ad36d41aa24c53acd81dcf
+      internalID: -1568246953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_145
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 272
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44a10cfdd6c0804db407ea73e347c03
+      internalID: 747214857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_146
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 272
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85296c910aad9b04baf51a188e7343e7
+      internalID: -1939127713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_147
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 143
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509aed568c483a047899bf3651c96b82
+      internalID: -1397309217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_148
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 144
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3515d8b8b9ddfb409a09373d8d4333b
+      internalID: -137958489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_149
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 147
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9702d5c25392f9349bc95ff5b1c54a01
+      internalID: -669530546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_150
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 145
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8545aa48f47cb4a4294c8e91fba663b5
+      internalID: 907221562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_151
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 147
+        width: 47
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa63750c40feca45a67045dd2804e3f
+      internalID: 1689100388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_152
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 148
+        width: 49
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b08b7e889a47347807497342217b8a
+      internalID: -63047526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_153
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 104
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e325152529ff742a8c5a7d3996762e
+      internalID: -1257664381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_154
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 104
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfc7558ffcf0224782eb74f9434bf03
+      internalID: -1578530529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_155
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 107
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9accb6f019b4c9a42b53a5041645564f
+      internalID: 360782127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_156
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 105
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b742476868d845f41bfda9a3bccc5417
+      internalID: 272080911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_157
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 108
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0274f8c92d068fd4c9eef7e33120cc0d
+      internalID: 1528667469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_158
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 31
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f3d5e014cae25458af79ec1a0c00ca
+      internalID: -1344696461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_159
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367860b4cc9f6134eb0fb41686d145ea
+      internalID: 1515217877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_160
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 400
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49998f6f21a0fc2499e5d883008f361a
+      internalID: -682749733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_161
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 400
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ced775d1ee61244bbb6bd5f9cec9938
+      internalID: -1231627945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_162
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 400
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031e3bffa2d716646b88563ae7c199b6
+      internalID: -125328214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES_Touring_Car_Sprite_Sheet_163
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 400
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8aad67f49ab5944a6b1d8addc7d3fc
+      internalID: -266074211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NES_Touring_Car_Sprite_Sheet_93: 1841300074
+      NES_Touring_Car_Sprite_Sheet_152: 1689100388
+      NES_Touring_Car_Sprite_Sheet_79: 1118405081
+      NES_Touring_Car_Sprite_Sheet_126: -2016434691
+      NES_Touring_Car_Sprite_Sheet_89: 1296112833
+      NES_Touring_Car_Sprite_Sheet_78: -536387190
+      NES_Touring_Car_Sprite_Sheet_85: -1776202276
+      NES_Touring_Car_Sprite_Sheet_105: -1759774873
+      NES_Touring_Car_Sprite_Sheet_39: -1551374483
+      NES_Touring_Car_Sprite_Sheet_142: 82755555
+      NES_Touring_Car_Sprite_Sheet_146: -1939127713
+      NES_Touring_Car_Sprite_Sheet_103: -1064275506
+      NES_Touring_Car_Sprite_Sheet_52: -133796137
+      NES_Touring_Car_Sprite_Sheet_12: -4240715
+      NES_Touring_Car_Sprite_Sheet_123: 1580665203
+      NES_Touring_Car_Sprite_Sheet_81: -1891437108
+      NES_Touring_Car_Sprite_Sheet_112: -1642386917
+      NES_Touring_Car_Sprite_Sheet_162: -1231627945
+      NES_Touring_Car_Sprite_Sheet_122: -1646924898
+      NES_Touring_Car_Sprite_Sheet_35: -1558076309
+      NES_Touring_Car_Sprite_Sheet_48: -1820091212
+      NES_Touring_Car_Sprite_Sheet_74: -1580658255
+      NES_Touring_Car_Sprite_Sheet_37: 505390372
+      NES_Touring_Car_Sprite_Sheet_158: 1528667469
+      NES_Touring_Car_Sprite_Sheet_58: -866226596
+      NES_Touring_Car_Sprite_Sheet_72: -845470339
+      NES_Touring_Car_Sprite_Sheet_17: -1087811035
+      NES_Touring_Car_Sprite_Sheet_68: 253816719
+      NES_Touring_Car_Sprite_Sheet_90: 826551501
+      NES_Touring_Car_Sprite_Sheet_150: -669530546
+      NES_Touring_Car_Sprite_Sheet_53: -1194386591
+      NES_Touring_Car_Sprite_Sheet_40: -1751413279
+      NES_Touring_Car_Sprite_Sheet_111: -2122122530
+      NES_Touring_Car_Sprite_Sheet_83: -279179027
+      NES_Touring_Car_Sprite_Sheet_55: 109543633
+      NES_Touring_Car_Sprite_Sheet_54: 529593171
+      NES_Touring_Car_Sprite_Sheet_80: -852722566
+      NES_Touring_Car_Sprite_Sheet_153: -63047526
+      NES_Touring_Car_Sprite_Sheet_144: -1568246953
+      NES_Touring_Car_Sprite_Sheet_82: -1607063749
+      NES_Touring_Car_Sprite_Sheet_71: 190987292
+      NES_Touring_Car_Sprite_Sheet_26: 734871903
+      NES_Touring_Car_Sprite_Sheet_18: -1933364013
+      NES_Touring_Car_Sprite_Sheet_32: -1582056820
+      NES_Touring_Car_Sprite_Sheet_110: 995856272
+      NES_Touring_Car_Sprite_Sheet_75: 1524147848
+      NES_Touring_Car_Sprite_Sheet_69: -1401704818
+      NES_Touring_Car_Sprite_Sheet_24: 1620890768
+      NES_Touring_Car_Sprite_Sheet_66: 1740008371
+      NES_Touring_Car_Sprite_Sheet_143: 883400252
+      NES_Touring_Car_Sprite_Sheet_9: 2028451669
+      NES_Touring_Car_Sprite_Sheet_91: -947238018
+      NES_Touring_Car_Sprite_Sheet_116: -731113308
+      NES_Touring_Car_Sprite_Sheet_137: 1281021208
+      NES_Touring_Car_Sprite_Sheet_30: -877987208
+      NES_Touring_Car_Sprite_Sheet_130: -1425479375
+      NES_Touring_Car_Sprite_Sheet_43: 2142761888
+      NES_Touring_Car_Sprite_Sheet_138: -1546430715
+      NES_Touring_Car_Sprite_Sheet_8: 683099565
+      NES_Touring_Car_Sprite_Sheet_51: 1731421868
+      NES_Touring_Car_Sprite_Sheet_139: 992703071
+      NES_Touring_Car_Sprite_Sheet_11: 1243718975
+      NES_Touring_Car_Sprite_Sheet_7: -2139167181
+      NES_Touring_Car_Sprite_Sheet_154: -1257664381
+      NES_Touring_Car_Sprite_Sheet_131: -75898369
+      NES_Touring_Car_Sprite_Sheet_3: -388104667
+      NES_Touring_Car_Sprite_Sheet_10: -1663988218
+      NES_Touring_Car_Sprite_Sheet_67: 455295253
+      NES_Touring_Car_Sprite_Sheet_88: 1552006536
+      NES_Touring_Car_Sprite_Sheet_62: -1588337787
+      NES_Touring_Car_Sprite_Sheet_77: -1669495710
+      NES_Touring_Car_Sprite_Sheet_13: 564353509
+      NES_Touring_Car_Sprite_Sheet_149: -137958489
+      NES_Touring_Car_Sprite_Sheet_84: -1557452183
+      NES_Touring_Car_Sprite_Sheet_106: 2012504821
+      NES_Touring_Car_Sprite_Sheet_33: -1342837459
+      NES_Touring_Car_Sprite_Sheet_156: 360782127
+      NES_Touring_Car_Sprite_Sheet_45: 1015672890
+      NES_Touring_Car_Sprite_Sheet_50: -763405560
+      NES_Touring_Car_Sprite_Sheet_128: -698876443
+      NES_Touring_Car_Sprite_Sheet_140: 1404073720
+      NES_Touring_Car_Sprite_Sheet_161: -682749733
+      NES_Touring_Car_Sprite_Sheet_47: 313475936
+      NES_Touring_Car_Sprite_Sheet_41: 2145594953
+      NES_Touring_Car_Sprite_Sheet_46: -98098284
+      NES_Touring_Car_Sprite_Sheet_147: -1397309217
+      NES_Touring_Car_Sprite_Sheet_21: -1094723649
+      NES_Touring_Car_Sprite_Sheet_64: -230432148
+      NES_Touring_Car_Sprite_Sheet_5: -1075511425
+      NES_Touring_Car_Sprite_Sheet_157: 272080911
+      NES_Touring_Car_Sprite_Sheet_29: -1771153343
+      NES_Touring_Car_Sprite_Sheet_38: 961681416
+      NES_Touring_Car_Sprite_Sheet_102: -599088442
+      NES_Touring_Car_Sprite_Sheet_151: 907221562
+      NES_Touring_Car_Sprite_Sheet_63: -552048173
+      NES_Touring_Car_Sprite_Sheet_132: -335161170
+      NES_Touring_Car_Sprite_Sheet_86: -270827058
+      NES_Touring_Car_Sprite_Sheet_163: -125328214
+      NES_Touring_Car_Sprite_Sheet_87: -295700095
+      NES_Touring_Car_Sprite_Sheet_108: 265036379
+      NES_Touring_Car_Sprite_Sheet_124: 64565183
+      NES_Touring_Car_Sprite_Sheet_95: -98355575
+      NES_Touring_Car_Sprite_Sheet_19: -1128786136
+      NES_Touring_Car_Sprite_Sheet_159: -1344696461
+      NES_Touring_Car_Sprite_Sheet_15: -681483825
+      NES_Touring_Car_Sprite_Sheet_133: 79163416
+      NES_Touring_Car_Sprite_Sheet_135: -1940120305
+      NES_Touring_Car_Sprite_Sheet_96: -199854006
+      NES_Touring_Car_Sprite_Sheet_97: -530312450
+      NES_Touring_Car_Sprite_Sheet_20: -1541672857
+      NES_Touring_Car_Sprite_Sheet_76: 1714509527
+      NES_Touring_Car_Sprite_Sheet_31: -475343881
+      NES_Touring_Car_Sprite_Sheet_113: -1408654915
+      NES_Touring_Car_Sprite_Sheet_117: -361868361
+      NES_Touring_Car_Sprite_Sheet_70: -1599112505
+      NES_Touring_Car_Sprite_Sheet_109: 917357973
+      NES_Touring_Car_Sprite_Sheet_107: 141927366
+      NES_Touring_Car_Sprite_Sheet_155: -1578530529
+      NES_Touring_Car_Sprite_Sheet_92: -1130302688
+      NES_Touring_Car_Sprite_Sheet_23: -308996867
+      NES_Touring_Car_Sprite_Sheet_127: 1267535814
+      NES_Touring_Car_Sprite_Sheet_61: 1476031460
+      NES_Touring_Car_Sprite_Sheet_100: 424943999
+      NES_Touring_Car_Sprite_Sheet_129: -2074920545
+      NES_Touring_Car_Sprite_Sheet_118: 1565297671
+      NES_Touring_Car_Sprite_Sheet_56: -1305706104
+      NES_Touring_Car_Sprite_Sheet_65: 912337961
+      NES_Touring_Car_Sprite_Sheet_34: 764487217
+      NES_Touring_Car_Sprite_Sheet_98: 1473341262
+      NES_Touring_Car_Sprite_Sheet_59: 2143584565
+      NES_Touring_Car_Sprite_Sheet_120: 1189915732
+      NES_Touring_Car_Sprite_Sheet_119: -1414989804
+      NES_Touring_Car_Sprite_Sheet_94: -1410433652
+      NES_Touring_Car_Sprite_Sheet_44: -509527956
+      NES_Touring_Car_Sprite_Sheet_22: -1042149622
+      NES_Touring_Car_Sprite_Sheet_115: -1936945773
+      NES_Touring_Car_Sprite_Sheet_141: -280340374
+      NES_Touring_Car_Sprite_Sheet_73: -1694352230
+      NES_Touring_Car_Sprite_Sheet_28: -1792426526
+      NES_Touring_Car_Sprite_Sheet_121: -684777395
+      NES_Touring_Car_Sprite_Sheet_60: -1744463917
+      NES_Touring_Car_Sprite_Sheet_114: 415078690
+      NES_Touring_Car_Sprite_Sheet_99: 320937724
+      NES_Touring_Car_Sprite_Sheet_4: 107178160
+      NES_Touring_Car_Sprite_Sheet_125: 1178233112
+      NES_Touring_Car_Sprite_Sheet_104: -884584566
+      NES_Touring_Car_Sprite_Sheet_134: 1153684806
+      NES_Touring_Car_Sprite_Sheet_57: 1303485906
+      NES_Touring_Car_Sprite_Sheet_136: -980490456
+      NES_Touring_Car_Sprite_Sheet_148: 1518547182
+      NES_Touring_Car_Sprite_Sheet_145: 747214857
+      NES_Touring_Car_Sprite_Sheet_36: 2010440633
+      NES_Touring_Car_Sprite_Sheet_42: -1830737119
+      NES_Touring_Car_Sprite_Sheet_101: 977338869
+      Car_SpriteSheet: -882456008
+      NES_Touring_Car_Sprite_Sheet_1: -496939947
+      NES_Touring_Car_Sprite_Sheet_160: 1515217877
+      NES_Touring_Car_Sprite_Sheet_6: 1152949661
+      NES_Touring_Car_Sprite_Sheet_14: 333354439
+      NES_Touring_Car_Sprite_Sheet_27: 1534542423
+      NES_Touring_Car_Sprite_Sheet_49: -1269819137
+      NES_Touring_Car_Sprite_Sheet_25: 986364935
+      NES_Touring_Car_Sprite_Sheet_2: -1233257473
+      NES_Touring_Car_Sprite_Sheet_16: -1613260353
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
