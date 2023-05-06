@@ -5,7 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Login.unity
+    guid: 21c6cebe7626e4046975057427b859e6
+  - enabled: 1
+    path: Assets/Scenes/Login_2.unity
+    guid: 335645bcf22a25447b6ed0ebbad51bc9
+  - enabled: 1
+    path: Assets/Scenes/Login_3.unity
+    guid: 7d2674ee873d8e446be0c0c8b861b4fc
+  - enabled: 1
+    path: Assets/Scenes/Feedback.unity
+    guid: 0d96c4b5c02afc44fba8dd8ad6d82ef3
+  - enabled: 1
+    path: Assets/Scenes/MarioGame.unity
+    guid: 57b1e03422cf92149b5978100893de23
+  - enabled: 1
+    path: Assets/Scenes/spaceship.unity
+    guid: dd3a35c034bb84acca35a369f858698a
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: b235b0cbd49da7d489b9e99d15d5b073
+  - enabled: 1
+    path: Assets/Scenes/NightDriver.unity
+    guid: 16151b25de2fa254c8ed2ef71f336f09
+  - enabled: 1
+    path: Assets/Scenes/WaterMole.unity
+    guid: 45d9e720175ba774fbeaf79595122f91
   m_configObjects: {}

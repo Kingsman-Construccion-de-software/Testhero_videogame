@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public void LoadGame()
+
+
+
+    public void CambiaEscena(string scene)
     {
-        SceneManager.LoadScene("Level1");
+          SceneManager.LoadScene(scene);
     }
 
-    public void LoadMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void Stop()
+    public void Salir()
     {
         Application.Quit();
     }
+
+
 }
