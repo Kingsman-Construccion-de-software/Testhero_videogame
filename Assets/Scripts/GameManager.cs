@@ -13,16 +13,17 @@ public class GameManager : MonoBehaviour
 
     private List<string> games = new List<string>();
 
+    private void Awake()
+    {
+        PlayerPrefs.SetString("ApiPrefix", "https://localhost:44423/api/");
+        PlayerPrefs.Save();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         currentGame = 0;
         DontDestroyOnLoad(this.gameObject);
-        games.Add("MarioGame");
-        games.Add("Maze");
-        games.Add("NightDriver");
-        games.Add("spaceship");
-        games.Add("WaterMole");
     }
 
     void Update()
