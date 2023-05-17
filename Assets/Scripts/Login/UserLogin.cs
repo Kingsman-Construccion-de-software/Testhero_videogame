@@ -104,6 +104,7 @@ public class UserLogin : MonoBehaviour
                 errorLogin.text = response.message;
             } else
             {
+                PlayerPrefs.SetInt("IdAlumno", response.idAlumno);
                 SceneController sc = FindObjectOfType<SceneController>();
                 sc.CambiaEscena("IngresaCodigo");
             }

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Login.unity
     guid: b3777b460ee2c32479401235c2cd13da
   - enabled: 1
-    path: Assets/Scenes/Login_2.unity
+    path: Assets/Scenes/IngresaCodigo.unity
     guid: 335645bcf22a25447b6ed0ebbad51bc9
   - enabled: 1
     path: Assets/Scenes/Login_3.unity
