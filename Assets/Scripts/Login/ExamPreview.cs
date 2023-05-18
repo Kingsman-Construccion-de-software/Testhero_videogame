@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -18,16 +19,20 @@ public class Etiqueta
 
 public class ExamPreview : MonoBehaviour
 {
-
+    [SerializeField] TMP_Text tituloTexto;
     [SerializeField] List<Button> etiquetas;
 
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("IdExamen", 19);
         StartCoroutine("GetEtiquetas");
     }
 
+
+    private void Start()
+    {
+        tituloTexto.text = PlayerPrefs.GetString("TituloExamen");
+    }
 
     IEnumerator GetEtiquetas()
     {
@@ -75,7 +80,6 @@ public class ExamPreview : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneController sc = FindObjectOfType<SceneController>();
-        sc.CambiaEscena("MarioGame");
+        FindObjectOfType<GameManager>().PrepareGame();
     }
 }
