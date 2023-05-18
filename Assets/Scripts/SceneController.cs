@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 
-
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void CambiaEscena(string scene)
     {
