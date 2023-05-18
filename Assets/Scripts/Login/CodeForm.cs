@@ -88,6 +88,7 @@ public class CodeForm : MonoBehaviour
             {
                 PlayerPrefs.SetInt("IdExamen", examen.idExamen);
                 PlayerPrefs.SetString("Nombre", examen.nombre);
+                PlayerPrefs.Save();
                 SceneController sc = FindObjectOfType<SceneController>();
                 sc.CambiaEscena("ExamPreview");
             } else
