@@ -11,9 +11,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentGame;
 
     private SceneController sc;
+    private QuestionManager qm;
+    //private TimeManager tm;
 
     private List<Minigame> allMinigames;
     private List<Minigame> currMinigames;
+
+    [SerializeField] private Pregunta currentQuestion;
 
     private void Awake()
     {
@@ -44,22 +48,47 @@ public class GameManager : MonoBehaviour
 
     public void PrepareGame()
     {
-        currMinigames = new List<Minigame>();
-        for(int i = 0; i < 5; i++)
+        qm = FindObjectOfType<QuestionManager>();
+        if(qm.GetPreguntasSize() > 0)
         {
-            currMinigames.Add(allMinigames[0]);
-        }
-        OpenScene(currMinigames[0]);
+            currMinigames = new List<Minigame>();
+            for (int i = 0; i < qm.GetPreguntasSize(); i++)
+            {
+                //agregar los minijuegos
+                //TODO: Hacerlo en orden aleatorio
+                currMinigames.Add(allMinigames[0]);
+            }
+            currentQuestion = qm.GetPregunta(0);
+            LoadNextGame();
+        } else
+        {
+            Debug.Log("No hay preguntas");
+        } 
     }
 
-    void OpenScene(Minigame minigame)
+    public void AdvanceGame()
+    {
+        currentGame++;
+        if(currentGame < qm.GetPreguntasSize())
+        {
+            //cargar siguiente minijuego
+            currentQuestion = qm.GetPregunta(currentGame);
+        }
+        else
+        {
+            //llevar a la pantalla de resultados
+        }
+    }
+
+    public void LoadNextGame()
+    {
+        OpenMinigame(currMinigames[currentGame]);
+    }
+
+
+    void OpenMinigame(Minigame minigame)
     {
         sc.CambiaEscena(minigame.ToString());
     }
 
-    void Update()
-    {
-        string name = SceneManager.GetActiveScene().name;
-
-    }
 }
