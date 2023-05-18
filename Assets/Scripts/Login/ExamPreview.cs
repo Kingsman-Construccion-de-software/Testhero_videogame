@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ public class Etiqueta
 
 public class ExamPreview : MonoBehaviour
 {
-
+    [SerializeField] TMP_Text tituloTexto;
     [SerializeField] List<Button> etiquetas;
 
 
@@ -27,6 +28,11 @@ public class ExamPreview : MonoBehaviour
         StartCoroutine("GetEtiquetas");
     }
 
+
+    private void Start()
+    {
+        tituloTexto.text = PlayerPrefs.GetString("TituloExamen");
+    }
 
     IEnumerator GetEtiquetas()
     {

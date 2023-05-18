@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class PlatformerPlayerController : MonoBehaviour
 {
 
     [SerializeField] private float playerSpeed = 5.0f;
@@ -13,7 +13,7 @@ public class Controller : MonoBehaviour
     private Animator anim;
     public LayerMask groundMask;
 
-    private GameManager gameManager;
+    private PlatformerManager pc;
 
     private bool colidingChest = false;
     private GameObject chest;
@@ -24,22 +24,33 @@ public class Controller : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        gameManager = FindObjectOfType<GameManager>();
+        pc = FindObjectOfType<PlatformerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-
-        if (Input.GetButton("Jump") && IsGrounded())
-            Jump();
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!pc.gameOver)
         {
-            if (colidingChest)
+
+            Move();
+
+            if (Input.GetButton("Jump") && IsGrounded())
+                Jump();
+
+            if (Input.GetKeyDown(KeyCode.E) && colidingChest)
             {
-                chest.GetComponent<Chest>().Open();
+                
+                Chest c = chest.GetComponent<Chest>();
+                if (c.isCorrectAnswer())
+                {
+                    pc.OnCorrectAnswer();
+                }
+                else
+                {
+                    pc.OnWrongAnswer();
+                }
+                
             }
         }
     }

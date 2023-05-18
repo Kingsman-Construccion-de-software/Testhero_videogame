@@ -87,7 +87,7 @@ public class CodeForm : MonoBehaviour
             if (DateTime.Compare(examen.fechaFin, DateTime.Now) < 0)
             {
                 PlayerPrefs.SetInt("IdExamen", examen.idExamen);
-                PlayerPrefs.SetString("Nombre", examen.nombre);
+                PlayerPrefs.SetString("TituloExamen", examen.nombre);
                 PlayerPrefs.Save();
                 SceneController sc = FindObjectOfType<SceneController>();
                 sc.CambiaEscena("ExamPreview");

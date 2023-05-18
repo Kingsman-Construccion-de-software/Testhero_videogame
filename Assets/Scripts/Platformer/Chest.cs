@@ -21,10 +21,21 @@ public class Chest : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
 
+    public void ToggleCorrectAnswer()
+    {
+        correctAnswer = true;
+    }
+
+    public bool isCorrectAnswer()
+    {
+        return correctAnswer;
+    }
+
     private void Start()
     {
         spr = GetComponent<SpriteRenderer>();
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

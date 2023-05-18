@@ -12,12 +12,46 @@ public class GameManager : MonoBehaviour
 
     private SceneController sc;
     private QuestionManager qm;
-    //private TimeManager tm;
+    private TimeManager tm;
 
     private List<Minigame> allMinigames;
     private List<Minigame> currMinigames;
 
     [SerializeField] private Pregunta currentQuestion;
+
+    [SerializeField] int totalPoints;
+    int addedPoints;
+    int respuestasCorrectas = 0;
+    
+    public Pregunta GetCurrentQuestion()
+    {
+        return currentQuestion;
+    }
+
+    public TimeManager GetTimeManager()
+    {
+        return tm;
+    }
+
+    public int GetAddedPoints()
+    {
+        return addedPoints;
+    }
+
+    public int GetTotalPoints()
+    {
+        return totalPoints;
+    }
+
+    public int GetRespuestasCorrectas()
+    {
+        return respuestasCorrectas;
+    }
+
+    public int GetTotalPreguntas()
+    {
+        return qm.GetPreguntasSize();
+    }
 
     private void Awake()
     {
@@ -29,9 +63,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentGame = 0;
+        totalPoints = 0;
         InitializeMinigames();
         sc = FindObjectOfType<SceneController>();
         DontDestroyOnLoad(this.gameObject);
+
     }
 
     void InitializeMinigames()
@@ -59,11 +95,28 @@ public class GameManager : MonoBehaviour
                 currMinigames.Add(allMinigames[0]);
             }
             currentQuestion = qm.GetPregunta(0);
+            tm = gameObject.AddComponent<TimeManager>();
             LoadNextGame();
         } else
         {
             Debug.Log("No hay preguntas");
         } 
+    }
+
+    public void OnCorrectAnswer(int basePoints)
+    {
+        sc.CambiaEscena("Feedback");
+        addedPoints = basePoints;
+        respuestasCorrectas++;
+        totalPoints += addedPoints;
+    }
+
+
+    public void OnWrongAnswer(int basePoints)
+    {
+        sc.CambiaEscena("Feedback");
+        addedPoints = -basePoints;
+        totalPoints += addedPoints;
     }
 
     public void AdvanceGame()
@@ -73,16 +126,23 @@ public class GameManager : MonoBehaviour
         {
             //cargar siguiente minijuego
             currentQuestion = qm.GetPregunta(currentGame);
+            LoadNextGame();
         }
         else
         {
             //llevar a la pantalla de resultados
+            LoadSummary();
         }
     }
 
-    public void LoadNextGame()
+    void LoadNextGame()
     {
         OpenMinigame(currMinigames[currentGame]);
+    }
+
+   void LoadSummary()
+    {
+        sc.CambiaEscena("Results");
     }
 
 
