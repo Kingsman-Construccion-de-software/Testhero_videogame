@@ -9,39 +9,39 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Login.unity
+    path: Assets/Scenes/Login/Login.unity
     guid: b3777b460ee2c32479401235c2cd13da
   - enabled: 1
-    path: Assets/Scenes/IngresaCodigo.unity
+    path: Assets/Scenes/Login/IngresaCodigo.unity
     guid: 335645bcf22a25447b6ed0ebbad51bc9
   - enabled: 1
-    path: Assets/Scenes/ExamPreview.unity
+    path: Assets/Scenes/Login/ExamPreview.unity
     guid: 7d2674ee873d8e446be0c0c8b861b4fc
   - enabled: 1
-    path: Assets/Scenes/Ranking.unity
+    path: Assets/Scenes/Process/Ranking.unity
     guid: 0d96c4b5c02afc44fba8dd8ad6d82ef3
   - enabled: 1
-    path: Assets/Scenes/MarioGame.unity
+    path: Assets/Scenes/Minigames/MarioGame.unity
     guid: 57b1e03422cf92149b5978100893de23
   - enabled: 1
-    path: Assets/Scenes/spaceship.unity
+    path: Assets/Scenes/Minigames/Spaceship.unity
     guid: dd3a35c034bb84acca35a369f858698a
   - enabled: 1
-    path: Assets/Scenes/Maze.unity
+    path: Assets/Scenes/Minigames/Maze.unity
     guid: b235b0cbd49da7d489b9e99d15d5b073
   - enabled: 1
-    path: Assets/Scenes/NightDriver.unity
+    path: Assets/Scenes/Minigames/NightDriver.unity
     guid: 16151b25de2fa254c8ed2ef71f336f09
   - enabled: 1
-    path: Assets/Scenes/WaterMole.unity
+    path: Assets/Scenes/Minigames/WaterMole.unity
     guid: 45d9e720175ba774fbeaf79595122f91
   - enabled: 1
-    path: Assets/Scenes/Feedback.unity
+    path: Assets/Scenes/Process/Feedback.unity
     guid: ebde59b6a057bbb40905b828b307b1c4
   - enabled: 1
-    path: Assets/Scenes/Results.unity
+    path: Assets/Scenes/Process/Results.unity
     guid: aee19ff70322e4849906b1482fccec2e
   - enabled: 1
-    path: Assets/Scenes/Final.unity
+    path: Assets/Scenes/Process/Final.unity
     guid: 21c6cebe7626e4046975057427b859e6
   m_configObjects: {}
