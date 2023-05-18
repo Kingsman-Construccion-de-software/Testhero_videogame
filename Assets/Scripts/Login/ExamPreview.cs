@@ -24,7 +24,6 @@ public class ExamPreview : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("IdExamen", 19);
         StartCoroutine("GetEtiquetas");
     }
 
@@ -75,7 +74,6 @@ public class ExamPreview : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneController sc = FindObjectOfType<SceneController>();
-        sc.CambiaEscena("MarioGame");
+        FindObjectOfType<GameManager>().PrepareGame();
     }
 }
