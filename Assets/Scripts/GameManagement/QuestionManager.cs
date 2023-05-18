@@ -30,19 +30,18 @@ public class QuestionManager : MonoBehaviour
 {
 
     [SerializeField] private Pregunta[] preguntasExamen;
-    Pregunta getPreguntas(int idPregunta)
+    public Pregunta GetPregunta(int idPregunta)
     {
         return preguntasExamen[idPregunta];
     }
 
-    int preguntasSize()
+    public int GetPreguntasSize()
     {
         return preguntasExamen.Length;
     }
 
     public void Awake()
     {
-        PlayerPrefs.SetInt("IdExamen", 19);
         DontDestroyOnLoad(this.gameObject);
     }
 
