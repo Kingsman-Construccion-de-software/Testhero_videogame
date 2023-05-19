@@ -70,7 +70,6 @@ public class RankingManager : MonoBehaviour
             scores = scores.OrderByDescending(s => s.puntaje).ToArray();
             for(int i = 0; i<scores.Length; i++)
             {
-                Debug.Log(scores[i].nombres + " " + scores[i].apellidos + " " + scores[i].puntaje);
                 DisplayScores();
             }
         }
