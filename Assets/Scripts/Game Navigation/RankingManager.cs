@@ -18,6 +18,11 @@ public class RankingManager : MonoBehaviour
     SceneController sc;
     public Score[] scores;
 
+    int scoreHeight = 50;
+    int verticalPadding = 100;
+    int initialOffset = 25;
+    int verticalOffset = 50;
+
     [SerializeField] GameObject UIScore;
     [SerializeField] RectTransform content;
     [SerializeField] List<Sprite> badges;
@@ -77,10 +82,10 @@ public class RankingManager : MonoBehaviour
 
     void DisplayScores()
     {
-        int totalHeight = scores.Length * 50 + 200;
+        int totalHeight = scores.Length * scoreHeight + verticalPadding;
         content.sizeDelta = new Vector2(0, totalHeight);
 
-        int top = totalHeight / 2 - 25;
+        int top = totalHeight / 2 - initialOffset;
         int num = 1;
 
         foreach(Score score in scores)
@@ -89,7 +94,7 @@ public class RankingManager : MonoBehaviour
             go.transform.SetParent(GameObject.FindGameObjectWithTag("Content").transform, false);
             RectTransform rt = go.GetComponent<RectTransform>();
             rt.anchoredPosition = new Vector3(0, top, 0);
-            top -= 50;
+            top -= verticalOffset;
 
             ScoreView sv = go.GetComponent<ScoreView>();
             string nombreCompleto = score.nombres + " " + score.apellidos;

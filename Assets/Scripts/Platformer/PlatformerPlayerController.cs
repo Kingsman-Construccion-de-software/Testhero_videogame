@@ -50,7 +50,8 @@ public class PlatformerPlayerController : MonoBehaviour
                 {
                     pc.OnWrongAnswer(c.IdRespuesta);
                 }
-                
+                anim.SetBool("isMoving", false);
+
             }
         }
     }

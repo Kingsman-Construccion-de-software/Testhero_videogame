@@ -18,9 +18,12 @@ public class GameManager : MonoBehaviour
     private List<Minigame> allMinigames;
     private List<Minigame> currMinigames;
 
-    [SerializeField] private Pregunta currentQuestion;
-    [SerializeField] private List<int> respuestas;
+    private Pregunta currentQuestion;
+    private List<int> respuestas;
 
+    [SerializeField] int wonPoints = 2000;
+    [SerializeField] int bonusPoints = 100;
+    [SerializeField] int lostPoints = 500;
     [SerializeField] int totalPoints;
     int addedPoints;
     int respuestasCorrectas = 0;
@@ -110,21 +113,27 @@ public class GameManager : MonoBehaviour
         } 
     }
 
-    public void OnCorrectAnswer(int basePoints, int idRespuesta)
+    public void OnCorrectAnswer(int idRespuesta)
     {
         sc.CambiaEscena("Feedback");
-        addedPoints = basePoints;
-        respuestasCorrectas++;
+
+        int time = Mathf.CeilToInt(tm.GetTimeRemaining());
+
+        addedPoints = wonPoints + time * bonusPoints;
         totalPoints += addedPoints;
+
+        respuestasCorrectas++;
         respuestas.Add(idRespuesta);
     }
 
 
-    public void OnWrongAnswer(int basePoints, int idRespuesta)
+    public void OnWrongAnswer(int idRespuesta)
     {
         sc.CambiaEscena("Feedback");
-        addedPoints = -basePoints;
+
+        addedPoints = -lostPoints;
         totalPoints += addedPoints;
+
         respuestas.Add(idRespuesta);
     }
 
