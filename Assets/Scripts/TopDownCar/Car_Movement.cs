@@ -21,5 +21,10 @@ public class Car_Movement : MonoBehaviour
         {
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
+        // Chocar con lados (limites posición 6.38)
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, -6.38f, 6.38f);
+        transform.position = pos; 
+        
     }
 }
