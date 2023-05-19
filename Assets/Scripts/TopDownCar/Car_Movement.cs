@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Car_Movement : MonoBehaviour
 {
-    public Transform transform;
+    public new Transform transform;
     public float speed = 5f;
     public float rotationSpeed = 5f;
 
