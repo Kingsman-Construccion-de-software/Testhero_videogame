@@ -20,10 +20,14 @@ public class ResultsManager : MonoBehaviour
         puntosTexto.text = totalPoints.ToString();
         respuestasCorrectas.text = $"SACASTE {correct}/{total}";
 
+        gameManager.SaveExam();
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            gameManager.LoadRanking();
+        }
     }
 }

@@ -282,7 +282,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -872,6 +872,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1550338213}
   - component: {fileID: 1550338214}
+  - component: {fileID: 1550338216}
+  - component: {fileID: 1550338215}
   m_Layer: 0
   m_Name: ResultsController
   m_TagString: Untagged
@@ -908,6 +910,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respuestasCorrectas: {fileID: 930361580}
   puntosTexto: {fileID: 1379982240}
+--- !u!114 &1550338215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550338212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45a3801caaf1c44eb380a93dc351a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1550338216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550338212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e31b1d4bb61e064abdf2e6febf87c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1624749925
 GameObject:
   m_ObjectHideFlags: 0
