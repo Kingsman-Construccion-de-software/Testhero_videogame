@@ -44,11 +44,11 @@ public class PlatformerPlayerController : MonoBehaviour
                 Chest c = chest.GetComponent<Chest>();
                 if (c.isCorrectAnswer())
                 {
-                    pc.OnCorrectAnswer();
+                    pc.OnCorrectAnswer(c.IdRespuesta);
                 }
                 else
                 {
-                    pc.OnWrongAnswer();
+                    pc.OnWrongAnswer(c.IdRespuesta);
                 }
                 
             }

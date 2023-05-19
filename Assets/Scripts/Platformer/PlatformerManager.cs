@@ -44,9 +44,12 @@ public class PlatformerManager : MonoBehaviour
             Respuesta resp = pregunta.respuestas[i];
             GameObject chestGo = Instantiate(chest, positions[i], chest.transform.rotation);
             chestGo.GetComponentInChildren<TMP_Text>().text = resp.textoRespuesta;
+
+            Chest chestScript = chestGo.GetComponent<Chest>();
+            chestScript.IdRespuesta = resp.idRespuesta;
             if (resp.esCorrecta == 1)
             {
-                chestGo.GetComponent<Chest>().ToggleCorrectAnswer();
+                chestScript.ToggleCorrectAnswer();
             }
             chestGameObjects.Add(chestGo);
         }
@@ -64,27 +67,31 @@ public class PlatformerManager : MonoBehaviour
                 int time = Mathf.CeilToInt(tm.GetTimeRemaining());
                 string timeT = "0:" + time.ToString();
                 timeText.text = timeT;
+                if (time <= 5)
+                {
+                    timeText.color = new Color(253/255f, 77/255f, 77/255f);
+                }
             }
             else
             {
-                OnWrongAnswer();
+                OnWrongAnswer(-1);
             }
         }
     }
 
 
-    public void OnCorrectAnswer()
+    public void OnCorrectAnswer(int idRespuesta)
     {
         ClearAnswers();
         gameOver = true;
-        StartCoroutine(FinishGame(true));
+        StartCoroutine(FinishGame(true, idRespuesta));
     }
 
-    public void OnWrongAnswer()
+    public void OnWrongAnswer(int idRespuesta)
     {
         ClearAnswers();
         gameOver = true;
-        StartCoroutine(FinishGame(false));
+        StartCoroutine(FinishGame(false, idRespuesta));
     }
 
     void ClearAnswers()
@@ -96,15 +103,15 @@ public class PlatformerManager : MonoBehaviour
         }
     }
 
-    IEnumerator FinishGame(bool win)
+    IEnumerator FinishGame(bool win, int idRespuesta)
     {
         yield return new WaitForSeconds(3);
         if (win)
         {
-            gameManager.OnCorrectAnswer(pointsWon);
+            gameManager.OnCorrectAnswer(pointsWon, idRespuesta);
         } else
         {
-            gameManager.OnWrongAnswer(pointsLost);
+            gameManager.OnWrongAnswer(pointsLost, idRespuesta);
         }
     }
 

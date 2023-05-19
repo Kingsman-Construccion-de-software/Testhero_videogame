@@ -20,6 +20,7 @@ public class Chest : MonoBehaviour
 
     [SerializeField] private GameManager gameManager;
 
+    public int IdRespuesta { get; set; }
 
     public void ToggleCorrectAnswer()
     {
@@ -41,7 +42,7 @@ public class Chest : MonoBehaviour
     {
         if (!opened)
         {
-            Vector2 offset = new Vector2(0, 1.5f);
+            Vector2 offset = new Vector2(0, 0f);
             Vector2 position = (Vector2)transform.position + offset;
             eKeyInstance = Instantiate(eKey, position, Quaternion.identity);
         }

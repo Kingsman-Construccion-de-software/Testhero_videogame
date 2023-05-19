@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,11 +19,15 @@ public class GameManager : MonoBehaviour
     private List<Minigame> currMinigames;
 
     [SerializeField] private Pregunta currentQuestion;
+    [SerializeField] private List<int> respuestas;
 
     [SerializeField] int totalPoints;
     int addedPoints;
     int respuestasCorrectas = 0;
-    
+
+    private ExamConnectionManager examConnection;
+    private AnswerSubmitManager asm;
+
     public Pregunta GetCurrentQuestion()
     {
         return currentQuestion;
@@ -67,7 +72,6 @@ public class GameManager : MonoBehaviour
         InitializeMinigames();
         sc = FindObjectOfType<SceneController>();
         DontDestroyOnLoad(this.gameObject);
-
     }
 
     void InitializeMinigames()
@@ -88,12 +92,15 @@ public class GameManager : MonoBehaviour
         if(qm.GetPreguntasSize() > 0)
         {
             currMinigames = new List<Minigame>();
+            respuestas = new List<int>();
+
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
                 //agregar los minijuegos
                 //TODO: Hacerlo en orden aleatorio
                 currMinigames.Add(allMinigames[0]);
             }
+
             currentQuestion = qm.GetPregunta(0);
             tm = gameObject.AddComponent<TimeManager>();
             LoadNextGame();
@@ -103,20 +110,22 @@ public class GameManager : MonoBehaviour
         } 
     }
 
-    public void OnCorrectAnswer(int basePoints)
+    public void OnCorrectAnswer(int basePoints, int idRespuesta)
     {
         sc.CambiaEscena("Feedback");
         addedPoints = basePoints;
         respuestasCorrectas++;
         totalPoints += addedPoints;
+        respuestas.Add(idRespuesta);
     }
 
 
-    public void OnWrongAnswer(int basePoints)
+    public void OnWrongAnswer(int basePoints, int idRespuesta)
     {
         sc.CambiaEscena("Feedback");
         addedPoints = -basePoints;
         totalPoints += addedPoints;
+        respuestas.Add(idRespuesta);
     }
 
     public void AdvanceGame()
@@ -135,6 +144,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SaveExam()
+    {
+        if (respuestas.Count == GetTotalPreguntas())
+        {
+            examConnection = FindObjectOfType<ExamConnectionManager>();
+            asm = FindObjectOfType<AnswerSubmitManager>();
+            examConnection.IdAlumno = PlayerPrefs.GetInt("IdAlumno");
+            examConnection.IdExamen = PlayerPrefs.GetInt("IdExamen");
+            double calificacion = (double)respuestasCorrectas / (double)qm.GetPreguntasSize() * 100;
+            examConnection.Calificacion = (int) calificacion;
+            examConnection.Puntaje = totalPoints;
+            examConnection.SubmitExam();
+
+            for (int i = 0; i < qm.GetPreguntasSize(); i++)
+            {
+                asm.IdPregunta = qm.GetPregunta(i).idPregunta;
+                asm.IdRespuesta = respuestas[i];
+                asm.SendAnswer();
+            }
+        } else
+        {
+            Debug.Log("No se ha completado el examen");
+        }
+    }
+
     void LoadNextGame()
     {
         OpenMinigame(currMinigames[currentGame]);
@@ -143,6 +177,11 @@ public class GameManager : MonoBehaviour
    void LoadSummary()
     {
         sc.CambiaEscena("Results");
+    }
+
+    public void LoadRanking()
+    {
+        sc.CambiaEscena("Ranking");
     }
 
 

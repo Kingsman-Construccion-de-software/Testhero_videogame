@@ -59,7 +59,6 @@ public class CodeForm : MonoBehaviour
         string URL = PlayerPrefs.GetString("ApiPrefix") + "examen/codigo/" + c;
 
 
-
         var req = UnityWebRequest.Get(URL);
 
         //Send the request then wait here until it returns

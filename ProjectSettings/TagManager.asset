@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Gem
   - Chest
+  - Content
   layers:
   - Default
   - TransparentFX

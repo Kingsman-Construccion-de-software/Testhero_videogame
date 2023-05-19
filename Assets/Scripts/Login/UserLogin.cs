@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class LoginResponse
 {
     public string message;
-    public int idAlumno;
+    public int id;
 }
 
 public class AlumnoData{
@@ -104,7 +104,7 @@ public class UserLogin : MonoBehaviour
                 errorLogin.text = response.message;
             } else
             {
-                PlayerPrefs.SetInt("IdAlumno", response.idAlumno);
+                PlayerPrefs.SetInt("IdAlumno", response.id);
                 SceneController sc = FindObjectOfType<SceneController>();
                 sc.CambiaEscena("IngresaCodigo");
             }
