@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -11,8 +12,8 @@ public class Examen
     public string codigo;
     public string nombre;
     public string materia;
-    public DateTime fechaInicio;
-    public DateTime fechaFin;
+    public string fechaInicio;
+    public string fechaFin;
     public int idGrupo;
 }
 
@@ -83,17 +84,25 @@ public class CodeForm : MonoBehaviour
         {
             Examen examen = new Examen();
             examen = JsonUtility.FromJson<Examen>(req.downloadHandler.text);
-            if (DateTime.Compare(examen.fechaFin, DateTime.Now) < 0)
+            DateTime now = DateTime.Now;
+            DateTime inicio = DateTime.ParseExact(examen.fechaInicio, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+            DateTime fin = DateTime.ParseExact(examen.fechaFin, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+            
+            if (DateTime.Compare(inicio, now) > 0)
+            {
+                submitError.text = "Este examen todavía no se encuentra disponible.";
+            } else if(DateTime.Compare(fin, DateTime.Now) < 0)
+            {
+                submitError.text = "Este examen ya no se encuentra disponible";
+            } else
             {
                 PlayerPrefs.SetInt("IdExamen", examen.idExamen);
                 PlayerPrefs.SetString("TituloExamen", examen.nombre);
                 PlayerPrefs.Save();
                 SceneController sc = FindObjectOfType<SceneController>();
                 sc.CambiaEscena("ExamPreview");
-            } else
-            {
-                submitError.text = "Este examen ya no se encuentra disponible";
             }
+            
            
         }
     }

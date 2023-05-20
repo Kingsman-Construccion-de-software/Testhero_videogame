@@ -12,9 +12,6 @@ public class PlatformerManager : MonoBehaviour
     [SerializeField] TMP_Text timeText;
     [SerializeField] float tiempoPregunta = 15f;
 
-    [SerializeField] int pointsWon = 1000;
-    [SerializeField] int pointsLost = 500;
-
     public bool gameOver = false;
 
     List<Vector3> positions = new List<Vector3>
@@ -84,6 +81,7 @@ public class PlatformerManager : MonoBehaviour
     {
         ClearAnswers();
         gameOver = true;
+        tm.Stop();
         StartCoroutine(FinishGame(true, idRespuesta));
     }
 
@@ -91,6 +89,7 @@ public class PlatformerManager : MonoBehaviour
     {
         ClearAnswers();
         gameOver = true;
+        tm.Stop();
         StartCoroutine(FinishGame(false, idRespuesta));
     }
 
@@ -108,10 +107,10 @@ public class PlatformerManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         if (win)
         {
-            gameManager.OnCorrectAnswer(pointsWon, idRespuesta);
+            gameManager.OnCorrectAnswer(idRespuesta);
         } else
         {
-            gameManager.OnWrongAnswer(pointsLost, idRespuesta);
+            gameManager.OnWrongAnswer(idRespuesta);
         }
     }
 

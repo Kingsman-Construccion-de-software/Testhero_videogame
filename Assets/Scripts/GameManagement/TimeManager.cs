@@ -7,16 +7,23 @@ public class TimeManager : MonoBehaviour
 
     public float timeRemaining = 0;
     public bool done = false;
+    public bool stopped = true;
 
     public void SetTimeRemaining(float timeRemaining)
     {
         this.timeRemaining = timeRemaining;
         done = false;
+        stopped = false;
     }
 
     public float GetTimeRemaining()
     {
         return timeRemaining;
+    }
+
+    public void Stop()
+    {
+        stopped = true;
     }
 
     public bool IsDone()
@@ -25,16 +32,20 @@ public class TimeManager : MonoBehaviour
     }
 
     
-
     // Update is called once per frame
     void Update()
     {
-        if(timeRemaining > 0)
+        if (!stopped)
         {
-            timeRemaining -= Time.deltaTime;
-        } else
-        {
-            done = true;
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                done = true;
+                stopped = true;
+            }
         }
     }
 }
