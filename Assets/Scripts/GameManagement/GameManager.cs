@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
             Minigame.Maze,
             Minigame.WaterMole,
             Minigame.Spaceship,
-            Minigame.NightDriver
+            Minigame.TopDownCar
         };
     }
 

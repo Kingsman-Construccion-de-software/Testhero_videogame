@@ -1,7 +1,7 @@
 public enum Minigame
 {
     MarioGame,
-    NightDriver,
+    TopDownCar,
     WaterMole,
     Spaceship,
     Maze
