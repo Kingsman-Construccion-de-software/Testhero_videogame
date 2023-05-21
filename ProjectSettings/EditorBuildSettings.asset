@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Login/ExamPreview.unity
     guid: 7d2674ee873d8e446be0c0c8b861b4fc
   - enabled: 1
+    path: Assets/Scenes/Login/ExamCompleted.unity
+    guid: 28222885b333bca42a8abb2ca5e807d7
+  - enabled: 1
     path: Assets/Scenes/Process/Ranking.unity
     guid: 0d96c4b5c02afc44fba8dd8ad6d82ef3
   - enabled: 1
@@ -29,9 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Maze.unity
     guid: b235b0cbd49da7d489b9e99d15d5b073
-  - enabled: 1
-    path: Assets/Scenes/Minigames/NightDriver.unity
-    guid: 16151b25de2fa254c8ed2ef71f336f09
   - enabled: 1
     path: Assets/Scenes/Minigames/WaterMole.unity
     guid: 45d9e720175ba774fbeaf79595122f91
