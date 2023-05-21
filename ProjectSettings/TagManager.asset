@@ -9,6 +9,7 @@ TagManager:
   - Gem
   - Chest
   - Content
+  - Trigger
   layers:
   - Default
   - TransparentFX
