@@ -25,17 +25,17 @@ public class TopDownCar_Manager : MonoBehaviour
     GameObject[] triggers;
 
     [SerializeField]
-    GameObject[] finishLine;
+    GameObject finishLine;
 
     [SerializeField]
-    GameObject[] obstacle;
+    GameObject obstacle;
 
     public TimeManager tm;
 
     List<Vector3> positions = new List<Vector3>
     {
         new Vector3(-5.4f, 6f, 0),
-        new Vector3(-1.8f, 6f, 0),
+        new Vector3(-1.8f, 4f, 0),
         new Vector3(1.8f, 6f, 0),
         new Vector3(5.4f, 6f, 0),
     };
@@ -55,11 +55,11 @@ public class TopDownCar_Manager : MonoBehaviour
             if (res.esCorrecta == 1)
             {
                 triggerOption.esCorrecta = true;
-                // Instantiate(finishLine, positions[i], Quaternion.identity);
+                Instantiate(finishLine, positions[i], Quaternion.identity);
             }
             else
             {
-                // Instantiate(obstacle, positions[i], Quaternion.identity);
+                Instantiate(obstacle, positions[i], Quaternion.identity);
             }
         }
     }

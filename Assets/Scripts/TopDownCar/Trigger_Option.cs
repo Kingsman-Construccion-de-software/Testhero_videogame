@@ -7,10 +7,12 @@ public class Trigger_Option : MonoBehaviour
     public int idRespuesta = -1;
     private GameManager gamemanager;
     public bool esCorrecta = false;
+    private TopDownCar_Manager controller;
 
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
+        controller = FindObjectOfType<TopDownCar_Manager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +23,7 @@ public class Trigger_Option : MonoBehaviour
 
     IEnumerator FinishGame(bool win, int idRespuesta)
     {
+        controller.gameOver = true; 
         yield return new WaitForSeconds(3);
         if (win)
         {
