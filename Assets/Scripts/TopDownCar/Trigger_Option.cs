@@ -17,13 +17,19 @@ public class Trigger_Option : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Opción");
-        StartCoroutine(FinishGame(esCorrecta, idRespuesta));
+        if (!controller.hasSelectedAnswer)
+        {
+            Debug.Log("Opción");
+            controller.tm.Stop();
+            StartCoroutine(FinishGame(esCorrecta, idRespuesta));
+        }
     }
 
     IEnumerator FinishGame(bool win, int idRespuesta)
     {
-        controller.gameOver = true; 
+        controller.hasSelectedAnswer = true; 
+        yield return new WaitForSeconds(2);
+        controller.gameOver = true;
         yield return new WaitForSeconds(3);
         if (win)
         {

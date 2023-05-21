@@ -17,6 +17,8 @@ public class TopDownCar_Manager : MonoBehaviour
     [SerializeField]
     private TMP_Text tiempoTexto;
     public bool gameOver = false;
+    public bool hasSelectedAnswer = false; 
+
 
     private GameManager gamemanager;
     private Pregunta pregunta;
@@ -35,7 +37,7 @@ public class TopDownCar_Manager : MonoBehaviour
     List<Vector3> positions = new List<Vector3>
     {
         new Vector3(-5.4f, 6f, 0),
-        new Vector3(-1.8f, 4f, 0),
+        new Vector3(-1.8f, 6f, 0),
         new Vector3(1.8f, 6f, 0),
         new Vector3(5.4f, 6f, 0),
     };
@@ -44,6 +46,7 @@ public class TopDownCar_Manager : MonoBehaviour
     {
         gamemanager = FindObjectOfType<GameManager>();
         tm = gamemanager.GetTimeManager();
+        tm.SetTimeRemaining(tiempo);
         pregunta = gamemanager.GetCurrentQuestion();
         preguntaTexto.text = pregunta.textoPregunta;
         for (int i = 0; i < 4; i++)
@@ -65,5 +68,24 @@ public class TopDownCar_Manager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        if (!gameOver)
+        {
+            if (!tm.IsDone())
+            {
+                int time = Mathf.CeilToInt(tm.GetTimeRemaining());
+                string timeT = "0:" + time.ToString();
+                tiempoTexto.text = timeT;
+                if (time <= 5)
+                {
+                    tiempoTexto.color = new Color(253 / 255f, 77 / 255f, 77 / 255f);
+                }
+            }
+            else
+            {
+                gamemanager.OnWrongAnswer(-1);
+            }
+        }
+    }
 }
