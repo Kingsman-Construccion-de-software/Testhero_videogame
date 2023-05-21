@@ -7,6 +7,9 @@ using TMPro;
 public class TopDownCar_Manager : MonoBehaviour
 {
     [SerializeField]
+    float tiempo = 15f;
+
+    [SerializeField]
     private List<TMP_Text> respuestasTexto;
 
     [SerializeField]
@@ -15,6 +18,7 @@ public class TopDownCar_Manager : MonoBehaviour
     [SerializeField]
     private TMP_Text tiempoTexto;
     public bool gameOver = false;
+
     private GameManager gamemanager;
     private Pregunta pregunta;
 
@@ -27,6 +31,8 @@ public class TopDownCar_Manager : MonoBehaviour
     [SerializeField]
     GameObject[] obstacle;
 
+    public TimeManager tm;
+
     List<Vector3> positions = new List<Vector3>
     {
         new Vector3(-5.4f, 6f, 0),
@@ -38,6 +44,7 @@ public class TopDownCar_Manager : MonoBehaviour
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
+        tm = gamemanager.GetTimeManager();
         pregunta = gamemanager.GetCurrentQuestion();
         preguntaTexto.text = pregunta.textoPregunta;
         for (int i = 0; i < 4; i++)
@@ -49,6 +56,11 @@ public class TopDownCar_Manager : MonoBehaviour
             if (res.isCorrect == 1)
             {
                 to.isCorrect = true;
+                Instantiate(finishLine, positions[i], Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(obstacle, positions[i], Quaternion.identity);
             }
         }
     }

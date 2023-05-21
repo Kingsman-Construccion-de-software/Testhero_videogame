@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trigger_Option : MonoBehaviour
 {
-    public int idRespuesta = 0;
+    public int idRespuesta = -1;
     private GameManager gamemanager;
     public bool isCorrect = false;
 
