@@ -101,7 +101,8 @@ public class GameManager : MonoBehaviour
             {
                 //agregar los minijuegos
                 //TODO: Hacerlo en orden aleatorio
-                currMinigames.Add(allMinigames[0]);
+
+                currMinigames.Add(allMinigames[1]);
             }
 
             currentQuestion = qm.GetPregunta(0);
