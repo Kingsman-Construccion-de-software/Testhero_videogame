@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using TMPro;
 
@@ -51,16 +50,16 @@ public class TopDownCar_Manager : MonoBehaviour
         {
             Respuesta res = pregunta.respuestas[i];
             respuestasTexto[i].text = res.textoRespuesta;
-            Trigger_Option to = triggers[i].GetComponent<Trigger_Option>();
-            to.isCorrect = res.idRespuesta; // revisar
-            if (res.isCorrect == 1)
+            Trigger_Option triggerOption = triggers[i].GetComponent<Trigger_Option>();
+            triggerOption.idRespuesta = res.idRespuesta; // revisar
+            if (res.esCorrecta == 1)
             {
-                to.isCorrect = true;
-                Instantiate(finishLine, positions[i], Quaternion.identity);
+                triggerOption.esCorrecta = true;
+                // Instantiate(finishLine, positions[i], Quaternion.identity);
             }
             else
             {
-                Instantiate(obstacle, positions[i], Quaternion.identity);
+                // Instantiate(obstacle, positions[i], Quaternion.identity);
             }
         }
     }

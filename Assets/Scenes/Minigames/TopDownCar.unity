@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idRespuesta: 0
+  esCorrecta: 0
 --- !u!1 &706210583
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idRespuesta: 0
+  esCorrecta: 0
 --- !u!61 &706210585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -515,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41596b9f055ad77478493d7f19c4f5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempo: 15
   respuestasTexto:
   - {fileID: 1193341198}
   - {fileID: 1354484549}
@@ -528,6 +531,13 @@ MonoBehaviour:
   - {fileID: 1341176199}
   - {fileID: 706210583}
   - {fileID: 1692203417}
+  finishLine:
+  - {fileID: 6729274355061014030, guid: 1b2f76b575697434e94544938a15baaf, type: 3}
+  obstacle:
+  - {fileID: 8534312499221377493, guid: c7255eb0ff482e94dac4e950ef9e652a, type: 3}
+  - {fileID: 8534312499221377493, guid: c7255eb0ff482e94dac4e950ef9e652a, type: 3}
+  - {fileID: 8534312499221377493, guid: c7255eb0ff482e94dac4e950ef9e652a, type: 3}
+  tm: {fileID: 0}
 --- !u!4 &785431914
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,6 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idRespuesta: 0
+  esCorrecta: 0
 --- !u!61 &1341176201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1360,6 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idRespuesta: 0
+  esCorrecta: 0
 --- !u!61 &1692203419
 BoxCollider2D:
   m_ObjectHideFlags: 0

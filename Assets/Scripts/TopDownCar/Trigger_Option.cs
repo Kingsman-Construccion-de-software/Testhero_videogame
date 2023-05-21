@@ -6,7 +6,7 @@ public class Trigger_Option : MonoBehaviour
 {
     public int idRespuesta = -1;
     private GameManager gamemanager;
-    public bool isCorrect = false;
+    public bool esCorrecta = false;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class Trigger_Option : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Opción");
-        StartCoroutine(FinishGame(isCorrect, idRespuesta));
+        StartCoroutine(FinishGame(esCorrecta, idRespuesta));
     }
 
     IEnumerator FinishGame(bool win, int idRespuesta)
