@@ -7,15 +7,25 @@ public class Car_Movement : MonoBehaviour
     public new Transform transform;
     public float speed = 5f;
     public float rotationSpeed = 5f;
+    private TopDownCar_Manager controller;
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start()
+    {
+        controller = FindObjectOfType<TopDownCar_Manager>(); // para algo que tiene otra cosa pero está en la escena
+        // GetComponent para algo que está en el script
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Clamp();
+        if (!controller.gameOver)
+        {
+            Movement();
+            Clamp();
+        } else {
+            // nose 
+        }
     }
 
     void Movement()
