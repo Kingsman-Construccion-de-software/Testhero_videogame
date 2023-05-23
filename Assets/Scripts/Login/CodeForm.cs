@@ -23,6 +23,7 @@ public class CodeForm : MonoBehaviour
     [SerializeField] TMP_InputField codigoInput;
     [SerializeField] TMP_Text codigoError;
     [SerializeField] TMP_Text submitError;
+    Examen examen;
 
     public void validateCodigo()
     {
@@ -82,29 +83,71 @@ public class CodeForm : MonoBehaviour
         }
         else
         {
-            Examen examen = new Examen();
+            examen = new Examen();
             examen = JsonUtility.FromJson<Examen>(req.downloadHandler.text);
-            DateTime now = DateTime.Now;
-            DateTime inicio = DateTime.ParseExact(examen.fechaInicio, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
-            DateTime fin = DateTime.ParseExact(examen.fechaFin, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
-            
-            if (DateTime.Compare(inicio, now) > 0)
-            {
-                submitError.text = "Este examen todavía no se encuentra disponible.";
-            } else if(DateTime.Compare(fin, DateTime.Now) < 0)
-            {
-                submitError.text = "Este examen ya no se encuentra disponible";
-            } else
-            {
-                PlayerPrefs.SetInt("IdExamen", examen.idExamen);
-                PlayerPrefs.SetString("TituloExamen", examen.nombre);
-                PlayerPrefs.Save();
-                SceneController sc = FindObjectOfType<SceneController>();
-                sc.CambiaEscena("ExamPreview");
-            }
-            
-           
+            PlayerPrefs.SetInt("IdExamen", examen.idExamen);
+            PlayerPrefs.SetString("TituloExamen", examen.nombre);
+            PlayerPrefs.Save();
+            StartCoroutine("CheckCompleted");
         }
     }
 
+    void validarFecha(Examen examen)
+    {
+        DateTime now = DateTime.Now;
+        DateTime inicio = DateTime.ParseExact(examen.fechaInicio, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+        DateTime fin = DateTime.ParseExact(examen.fechaFin, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+
+        if (DateTime.Compare(inicio, now) > 0)
+        {
+            submitError.text = "Este examen todavía no se encuentra disponible.";
+        }
+        else if (DateTime.Compare(fin, DateTime.Now) < 0)
+        {
+            submitError.text = "Este examen ya no se encuentra disponible";
+        }
+        else
+        {
+            SceneController sc = FindObjectOfType<SceneController>();
+            sc.CambiaEscena("ExamPreview");
+        }
+    }
+
+
+    IEnumerator CheckCompleted()
+    {
+        int IdAlumno = PlayerPrefs.GetInt("IdAlumno");
+        int IdExamen = PlayerPrefs.GetInt("IdExamen");
+
+        string URL = PlayerPrefs.GetString("ApiPrefix") + "alumno/examen/" + IdAlumno + "/" + IdExamen;
+
+        var req = UnityWebRequest.Get(URL);
+
+        //Send the request then wait here until it returns
+        yield return req.SendWebRequest();
+
+        handleResultCompleted(req);
+
+        req.Dispose();
+    }
+
+    void handleResultCompleted(UnityWebRequest req)
+    {
+        if (req.result == UnityWebRequest.Result.ProtocolError)
+        {
+            //el alumno no ha completado el examen
+            validarFecha(examen);
+        }
+        else if (req.result == UnityWebRequest.Result.ConnectionError)
+        {
+            Debug.Log("Error de conexión");
+        }
+        else
+        {
+            Score score = new Score();
+            score = JsonUtility.FromJson<Score>(req.downloadHandler.text);
+            SceneController sc = FindObjectOfType<SceneController>();
+            sc.CambiaEscena("ExamCompleted");
+        }
+    }
 }
