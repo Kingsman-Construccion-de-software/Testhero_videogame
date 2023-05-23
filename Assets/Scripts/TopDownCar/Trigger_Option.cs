@@ -17,7 +17,7 @@ public class Trigger_Option : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!controller.hasSelectedAnswer)
+        if (!controller.gameOver)
         {
             Debug.Log("Opción");
             controller.tm.Stop();
@@ -27,9 +27,9 @@ public class Trigger_Option : MonoBehaviour
 
     IEnumerator FinishGame(bool win, int idRespuesta)
     {
-        controller.hasSelectedAnswer = true; 
-        yield return new WaitForSeconds(2);
         controller.gameOver = true;
+        //hacer aparecer los obstáculos
+        //en el script de los obstáculos poner los métodos OnCorrectAnswer, onWrongAnswer
         yield return new WaitForSeconds(3);
         if (win)
         {

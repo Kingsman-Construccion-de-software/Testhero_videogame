@@ -29,12 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Maze.unity
     guid: b235b0cbd49da7d489b9e99d15d5b073
-  - enabled: 1
-    path: Assets/Scenes/Minigames/NightDriver.unity
-    guid: 16151b25de2fa254c8ed2ef71f336f09
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Minigames/WaterMole.unity
     guid: 45d9e720175ba774fbeaf79595122f91
+  - enabled: 1
+    path: Assets/Scenes/Minigames/TopDownCar.unity
+    guid: d1cec6ddf85450f4ebcd39d51f4270af
   - enabled: 1
     path: Assets/Scenes/Process/Feedback.unity
     guid: ebde59b6a057bbb40905b828b307b1c4

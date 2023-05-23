@@ -17,7 +17,7 @@ public class TopDownCar_Manager : MonoBehaviour
     [SerializeField]
     private TMP_Text tiempoTexto;
     public bool gameOver = false;
-    public bool hasSelectedAnswer = false; 
+    // public bool hasSelectedAnswer = false; 
 
 
     private GameManager gamemanager;
