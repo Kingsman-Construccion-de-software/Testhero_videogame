@@ -4,9 +4,68 @@ using UnityEngine;
 
 public class Trigger_Option : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Opción");
-        
+    public int idRespuesta = -1;
+    private GameManager gamemanager;
+    public bool esCorrecta = false;
+    private TopDownCar_Manager controller;
+
+    void Start()
+    {
+        gamemanager = FindObjectOfType<GameManager>();
+        controller = FindObjectOfType<TopDownCar_Manager>();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!controller.gameOver)
+        {
+            Debug.Log("Opción");
+            if (collision.gameObject.tag == "Obstacle")
+            {
+                Debug.Log("Tilin");
+                FindObjectOfType<Road_Animation>().enabled = false; // pausa el script de road
+                FindObjectOfType<Car_Movement>().enabled = false; // pausa el script de movimiento
+            }
+            controller.tm.Stop();
+            StartCoroutine(FinishGame(esCorrecta, idRespuesta));
+        }
+    }
+
+    // IEnumerator FinishGame(bool win, int idRespuesta)
+    // {
+    //     controller.gameOver = true;
+    //     //hacer aparecer los obstáculos
+    //     //en el script de los obstáculos poner los métodos OnCorrectAnswer, onWrongAnswer
+    //     yield return new WaitForSeconds(3);
+    //     if (win)
+    //     {
+    //         gamemanager.OnCorrectAnswer(idRespuesta);
+    //     }
+    //     else
+    //     {
+    //         gamemanager.OnWrongAnswer(idRespuesta);
+    //     }
+    // }
+
+    IEnumerator FinishGame(bool win, int idRespuesta)
+    {
+        controller.gameOver = true;
+        //hacer aparecer los obstáculos
+        //en el script de los obstáculos poner los métodos OnCorrectAnswer, onWrongAnswer
+        yield return new WaitForSeconds(3);
+        if (win)
+        {
+            gamemanager.OnCorrectAnswer(idRespuesta);
+        }
+        else
+        {
+            gamemanager.OnWrongAnswer(idRespuesta);
+            // Move down the obstacles here
+            GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+            foreach (GameObject obstacle in obstacles)
+            {
+                obstacle.transform.position += Vector3.down * 5f;
+            }
+        }
+    }
 }

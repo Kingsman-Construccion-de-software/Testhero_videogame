@@ -6,6 +6,7 @@ public class Road_Animation : MonoBehaviour
 {
     public Renderer meshRenderer;
     public float speed = 0.5f;
+    private bool crash = false;
 
     // truquear una mmda para que vaya más rápido
 
@@ -14,8 +15,10 @@ public class Road_Animation : MonoBehaviour
         // Vector2 offset = meshRenderer.material.mainTextureOffset;
         // offset = offset + new Vector2(0, speed * Time.deltaTime);
         // meshRenderer.material.mainTextureOffset = offset;
-
-
-        meshRenderer.material.mainTextureOffset += new Vector2(0, speed * Time.deltaTime);
+        if (!crash)
+        {
+            meshRenderer.material.mainTextureOffset += new Vector2(0, speed * Time.deltaTime);
+        }
     }
+
 }
