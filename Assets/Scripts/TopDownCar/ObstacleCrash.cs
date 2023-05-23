@@ -5,41 +5,42 @@ using UnityEngine;
 public class ObstacleCrash : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float duration = 15f;
-    private float timeElapsed = 0f;
-    private float startY;
+    private float speed = 4f;
+    public bool esCorrecta = false;
+    public int idRespuesta = -1;
+    private TopDownCar_Manager controller;
+    private GameManager gameManager;
+
 
     void Start()
     {
-        startY = transform.position.y;
+        controller = FindObjectOfType<TopDownCar_Manager>();
+        gameManager = FindObjectOfType<GameManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeElapsed += Time.deltaTime;
-        if (timeElapsed < duration)
-        {
-            float newY = Mathf.Lerp(startY, 0f, timeElapsed / duration);
-            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        if (controller.gameOver)
+        {            
+            transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            GetComponent<Road_Animation>().enabled = false; // pausa el script de road
-            GetComponent<Car_Movement>().enabled = false; // pausa el script de movimiento
+            if (esCorrecta)
+            {
+                gameManager.OnCorrectAnswer(idRespuesta);
+            }
+            else
+            {
+                gameManager.OnWrongAnswer(idRespuesta);
+            }
         }
     }
-}
 
-// private void OnTriggerEnter(Collider other)
-// {
-//     if (other.gameObject.CompareTag("Player"))
-//     {
-//         isPaused = true;
-//         Time.timeScale = 0;
-//     }
-// }
+}
