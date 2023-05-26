@@ -22,10 +22,10 @@ public class MoleManager : MonoBehaviour
     public bool gameOver = false;
     List<Vector3> positions = new List<Vector3>
     {
-        new Vector3(-9.2f, 1.33f, 0),
-        new Vector3(-5f, -6.9f, 0),
-        new Vector3(7f, -7f, 0),
-        new Vector3(11.3f, -1.3f, 0)
+        new Vector3(-16f, 4.3f, 0),
+        new Vector3(-0.2f, -1.2f, 0),
+        new Vector3(16.5f, -6.2f, 0),
+        new Vector3(0f, -0.5f, 0)
     };
 
     private TimeManager tm;
