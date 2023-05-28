@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class EnemiesGrid : MonoBehaviour {
     public Enemy[] prefabs;
+    public Projectile missilePrefab;
     public int rows = 4;
     public int columns = 5;
     public float gridSpace = 2.0f;
     public int optionsQty = 4;
     public int[,] optionsCoords;
+    public int enemiesAmountKilled { get; private set; }
+    public int totalEnemies => this.rows * this.columns;
+    public int totalEnemiesAlive => this.totalEnemies - this.enemiesAmountKilled;
+    public float percentKilled => (float)this.enemiesAmountKilled / (float)this.totalEnemies;
     public Color[] colors = {Color.magenta, Color.green, Color.blue, Color.yellow};
+    public float missileAttackRate = 1.0f;
 
     private void Awake() {
         optionsCoords = new int[optionsQty, 2];
@@ -24,6 +30,7 @@ public class EnemiesGrid : MonoBehaviour {
 
             for(int col=0;col<this.columns;col++) {
                 Enemy enemy = Instantiate(this.prefabs[row], this.transform);
+                enemy.killed += EnemyKilled;
 
                 for(int i=0;i<optionsQty;i++) {
                     int x = optionsCoords[i, 0];
@@ -41,6 +48,10 @@ public class EnemiesGrid : MonoBehaviour {
                 enemy.transform.localPosition = position;
             }
         }
+    }
+
+    private void Start() {
+        InvokeRepeating(nameof(MissilAttack), this.missileAttackRate, this.missileAttackRate);
     }
 
     private bool numberInArray(int number, int[] arr) {
@@ -72,5 +83,22 @@ public class EnemiesGrid : MonoBehaviour {
                 Debug.Log(optionsCoords[i, j]);
             }
         }
+    }
+
+    private void MissilAttack() {
+        foreach(Transform enemy in this.transform) {
+            if(!enemy.gameObject.activeInHierarchy) {
+                continue;
+            }
+
+            if(Random.value < (1.0f / (float)this.totalEnemiesAlive)) {
+                Instantiate(this.missilePrefab, enemy.position, Quaternion.identity);
+                break;
+            }
+        }
+    }
+
+    private void EnemyKilled() {
+        this.enemiesAmountKilled++;
     }
 }
