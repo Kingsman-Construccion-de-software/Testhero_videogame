@@ -83,10 +83,11 @@ public class GameManager : MonoBehaviour
         {
             Minigame.MarioGame,
             Minigame.Maze,
-            Minigame.WaterMole,
-            Minigame.Spaceship,
+            //Minigame.WaterMole,
+            //Minigame.Spaceship,
             Minigame.TopDownCar
         };
+        currMinigames = new List<Minigame>();
     }
 
     public void PrepareGame()
@@ -94,16 +95,16 @@ public class GameManager : MonoBehaviour
         qm = FindObjectOfType<QuestionManager>();
         if(qm.GetPreguntasSize() > 0)
         {
-            currMinigames = new List<Minigame>();
             respuestas = new List<int>();
 
+            currMinigames = ChooseGames(qm.GetPreguntasSize());
+
+            /*
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
-                //agregar los minijuegos
-                //TODO: Hacerlo en orden aleatorio
-
-                currMinigames.Add(allMinigames[4]);
+                //currMinigames.Add(allMinigames[4]);
             }
+            */
             
             currentQuestion = qm.GetPregunta(0);
             tm = gameObject.AddComponent<TimeManager>();
@@ -113,6 +114,34 @@ public class GameManager : MonoBehaviour
             Debug.Log("No hay preguntas");
         } 
     }
+
+    //seleccionar la lista de juegos evitando repeticiones por 2 turnos
+    public List<Minigame> ChooseGames(int n)
+    {
+        List<Minigame> lastMinigames = new List<Minigame>(3);
+        List<Minigame> listMinigames = new List<Minigame>();
+
+        System.Random rnd = new System.Random();
+        int randomNumber;
+        int totalN = allMinigames.Count;
+
+        for(int i = 0; i<n; i++)
+        {
+            do
+            {
+                randomNumber = rnd.Next(0, totalN);
+            } while(lastMinigames.Contains(allMinigames[randomNumber]));
+            if (lastMinigames.Count == 2)
+            {
+                lastMinigames.RemoveAt(0);
+            }
+            lastMinigames.Add(allMinigames[randomNumber]);
+            listMinigames.Add(allMinigames[randomNumber]);
+        }
+
+        return listMinigames;
+    }
+
 
     public void OnCorrectAnswer(int idRespuesta)
     {

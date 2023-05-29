@@ -113,13 +113,14 @@ public class CodeForm : MonoBehaviour
         }
     }
 
+    //se valida si el usuario ya ha completado el examen
 
     IEnumerator CheckCompleted()
     {
         int IdAlumno = PlayerPrefs.GetInt("IdAlumno");
         int IdExamen = PlayerPrefs.GetInt("IdExamen");
 
-        string URL = PlayerPrefs.GetString("ApiPrefix") + "alumno/examen/" + IdAlumno + "/" + IdExamen;
+        string URL = PlayerPrefs.GetString("ApiPrefix") + "alumno/examen/" + IdExamen + "/" + IdAlumno;
 
         var req = UnityWebRequest.Get(URL);
 
