@@ -5,14 +5,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
-[System.Serializable]
-public class Score
-{
-    public string nombres;
-    public string apellidos;
-    public int puntaje;
-}
-
 public class RankingManager : MonoBehaviour
 {
     SceneController sc;
