@@ -5,13 +5,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Linq;
 
-public class ExamData
-{
-    public int IdAlumno;
-    public int IdExamen;
-    public int Calificacion;
-    public int Puntaje;
-}
 
 
 public class ExamConnectionManager : MonoBehaviour

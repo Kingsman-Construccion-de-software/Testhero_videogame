@@ -4,27 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-[System.Serializable]
-public class Pregunta
-{
-    public int idPregunta;
-    public int idExamen;
-    public string textoPregunta;
-    public Respuesta[] respuestas;
-}
 
-
-[System.Serializable]
-public class Respuesta
-{
-    public int idRespuesta;
-    public string textoRespuesta;
-    public int esCorrecta;
-    public int idPregunta;
-}
-
-//pregunta/examen/idExamen
-//respuesta/pregunta/idPregunta
 
 public class QuestionManager : MonoBehaviour
 {
