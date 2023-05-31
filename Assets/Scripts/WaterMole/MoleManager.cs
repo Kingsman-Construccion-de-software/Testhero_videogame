@@ -51,6 +51,25 @@ public class MoleManager : MonoBehaviour
         tm.SetTimeRemaining(tiempoPregunta);
     }
 
+    private bool playerInsideCollider = false; // Flag to track if the player is inside the collider
+    private bool canSpawnSprite = true; // Flag to track if a sprite can be spawned
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInsideCollider = true; // Set flag to true when the player enters the collider
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInsideCollider = false; // Set flag to false when the player exits the collider
+        }
+    }
+
     void Update()
     {
         if (!gameOver)
@@ -68,30 +87,6 @@ public class MoleManager : MonoBehaviour
             else
             {
                 gamemanager.OnWrongAnswer(-1);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero);
-            if (hit.collider != null)
-            {
-                // Check if the hit collider belongs to one of the answer sprites
-                for (int i = 0; i < answerSprites.Count; i++)
-                {
-                    if (hit.collider.gameObject == answerSprites[i])
-                    {
-                        if (pregunta.respuestas[i].esCorrecta == 1)
-                        {
-                            OnCorrectAnswer(pregunta.respuestas[i].idRespuesta);
-                        }
-                        else
-                        {
-                            OnWrongAnswer(pregunta.respuestas[i].idRespuesta);
-                        }
-                        break;
-                    }
-                }
             }
         }
     }
@@ -133,4 +128,3 @@ public class MoleManager : MonoBehaviour
         }
     }
 }
-

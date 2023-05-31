@@ -42,14 +42,6 @@ public class FishSpawn : MonoBehaviour
                 currentInteractSprite = Instantiate(interactSpritePrefab, interactSpriteParent);
                 currentInteractSprite.transform.position = transform.position + Vector3.up * 2f;
             }
-
-            // Check if the player presses the "e" key
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                // Spawn another sprite above the player
-                GameObject newSprite = Instantiate(interactSpritePrefab, interactSpriteParent);
-                newSprite.transform.position = player.transform.position + Vector3.up * 2f;
-            }
         }
         else
         {
@@ -102,3 +94,4 @@ public class FishSpawn : MonoBehaviour
         }
     }
 }
+
