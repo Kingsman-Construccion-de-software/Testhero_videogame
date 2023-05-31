@@ -12436,6 +12436,10 @@ PrefabInstance:
       value: Fish (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1301987432958849926, guid: 26a6211318541224482a21607db45418, type: 3}
+      propertyPath: eKey
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301987432958849926, guid: 26a6211318541224482a21607db45418, type: 3}
       propertyPath: interactSpritePrefab
       value: 
       objectReference: {fileID: 1961595845445946676, guid: 0753c0bdff4cad54c8a7f7db51dc6c4b, type: 3}
@@ -16055,6 +16059,10 @@ PrefabInstance:
     - target: {fileID: 1301987432958849925, guid: 26a6211318541224482a21607db45418, type: 3}
       propertyPath: m_Name
       value: Fish (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301987432958849926, guid: 26a6211318541224482a21607db45418, type: 3}
+      propertyPath: eKey
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1301987432958849926, guid: 26a6211318541224482a21607db45418, type: 3}
       propertyPath: interactSpritePrefab
