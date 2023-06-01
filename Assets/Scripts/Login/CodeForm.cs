@@ -87,7 +87,6 @@ public class CodeForm : MonoBehaviour
     }
 
     //se valida si el usuario ya ha completado el examen
-
     IEnumerator CheckCompleted()
     {
         int IdAlumno = PlayerPrefs.GetInt("IdAlumno");
