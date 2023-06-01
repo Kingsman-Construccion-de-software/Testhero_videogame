@@ -15,6 +15,18 @@ public class CodeForm : MonoBehaviour
 
     public void validateCodigo()
     {
+        //datos para pruebas
+        //TODO: Remover antes de deployment
+        if(codigoInput.text == "EXAMPRUEBA")
+        {
+            PlayerPrefs.SetInt("IdExamen", -1);
+            PlayerPrefs.SetString("TituloExamen", "Examen de prueba");
+            PlayerPrefs.Save();
+            SceneController sce = FindObjectOfType<SceneController>();
+            sce.CambiaEscena("ExamPreview");
+            return;
+        }
+
         if (codigoInput.text.Length == 8)
         {
             StartCoroutine("PostCodigo");
