@@ -16,6 +16,13 @@ public class ExamPreview : MonoBehaviour
 
     private void Awake()
     {
+        //Para el caso de prueba
+        //TODO: eliminar para deployment
+        if(PlayerPrefs.GetInt("IdExamen") == -1)
+        {
+            return;
+        }
+
         StartCoroutine("GetEtiquetas");
     }
 

@@ -20,7 +20,19 @@ public class UserLogin : MonoBehaviour
 
     public void validateAlumno()
     {
-        if(correo.text.Length > 0  && password.text.Length > 0)
+
+        //datos para pruebas
+        //TODO: Remover antes de deployment
+        if (correo.text == "alumno@prueba.com" && password.text == "alumnoprueba")
+        {
+            PlayerPrefs.SetInt("IdAlumno", -1);
+            PlayerPrefs.Save();
+            SceneController sce = FindObjectOfType<SceneController>();
+            sce.CambiaEscena("IngresaCodigo");
+            return;
+        }
+
+        if (correo.text.Length > 0  && password.text.Length > 0)
         {
             StartCoroutine("PostAlumno");
         } else
