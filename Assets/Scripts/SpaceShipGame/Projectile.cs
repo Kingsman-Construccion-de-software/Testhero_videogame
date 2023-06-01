@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public Vector3 direction;
-    public float speed;
+    public float speed = 1.0f;
     public System.Action destroyed;
 
     private void Update() {

@@ -1729,6 +1729,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGame: 0
+  wonPoints: 2000
+  bonusPoints: 100
+  lostPoints: 500
+  totalPoints: 0
 --- !u!4 &1268124619
 Transform:
   m_ObjectHideFlags: 0

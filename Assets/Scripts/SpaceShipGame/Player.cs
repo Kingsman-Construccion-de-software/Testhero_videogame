@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public Projectile laserPrefab;
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     private bool laserActive;
+
     void Start()
     {
         

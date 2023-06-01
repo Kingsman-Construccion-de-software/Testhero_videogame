@@ -83,9 +83,9 @@ public class GameManager : MonoBehaviour
         {
             Minigame.MarioGame,
             Minigame.Maze,
+            //Minigame.TopDownCar
             //Minigame.WaterMole,
-            //Minigame.Spaceship,
-            Minigame.TopDownCar
+            Minigame.Spaceship,
         };
         currMinigames = new List<Minigame>();
     }
