@@ -8,16 +8,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class LoginResponse
-{
-    public string message;
-    public int id;
-}
-
-public class AlumnoData{
-    public string correo;
-    public string password;
-}
 
 public class UserLogin : MonoBehaviour
 {
@@ -105,6 +95,7 @@ public class UserLogin : MonoBehaviour
             } else
             {
                 PlayerPrefs.SetInt("IdAlumno", response.id);
+                PlayerPrefs.SetInt("IdGrupo", response.idGrupo);
                 SceneController sc = FindObjectOfType<SceneController>();
                 sc.CambiaEscena("IngresaCodigo");
             }

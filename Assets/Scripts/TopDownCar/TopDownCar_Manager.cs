@@ -17,8 +17,7 @@ public class TopDownCar_Manager : MonoBehaviour
     [SerializeField]
     private TMP_Text tiempoTexto;
     public bool gameOver = false;
-    public bool hasSelectedAnswer = false; 
-
+    // public bool hasSelectedAnswer = false; 
 
     private GameManager gamemanager;
     private Pregunta pregunta;
@@ -33,6 +32,9 @@ public class TopDownCar_Manager : MonoBehaviour
     GameObject obstacle;
 
     public TimeManager tm;
+
+    [SerializeField]
+    private Canvas canvas;
 
     List<Vector3> positions = new List<Vector3>
     {
@@ -53,16 +55,15 @@ public class TopDownCar_Manager : MonoBehaviour
         {
             Respuesta res = pregunta.respuestas[i];
             respuestasTexto[i].text = res.textoRespuesta;
-            Trigger_Option triggerOption = triggers[i].GetComponent<Trigger_Option>();
-            triggerOption.idRespuesta = res.idRespuesta; // revisar
             if (res.esCorrecta == 1)
             {
-                triggerOption.esCorrecta = true;
-                Instantiate(finishLine, positions[i], Quaternion.identity);
+                GameObject go = Instantiate(finishLine, positions[i], Quaternion.identity);
+                go.GetComponent<ObstacleCrash>().idRespuesta = res.idRespuesta;
             }
             else
             {
-                Instantiate(obstacle, positions[i], Quaternion.identity);
+                GameObject go =  Instantiate(obstacle, positions[i], Quaternion.identity);
+                go.GetComponent<ObstacleCrash>().idRespuesta = res.idRespuesta;
             }
         }
     }
@@ -87,5 +88,15 @@ public class TopDownCar_Manager : MonoBehaviour
                 gamemanager.OnWrongAnswer(-1);
             }
         }
+    }
+
+    public void StopTime()
+    {
+        tm.Stop();
+    }
+
+    public void HideUI()
+    {
+        canvas.gameObject.SetActive(false);
     }
 }

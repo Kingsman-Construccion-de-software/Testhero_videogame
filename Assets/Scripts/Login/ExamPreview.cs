@@ -8,15 +8,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Etiqueta
-{
-    public int idEtiqueta;
-    public string nombre;
-}
-
-
-
 public class ExamPreview : MonoBehaviour
 {
     [SerializeField] TMP_Text tituloTexto;

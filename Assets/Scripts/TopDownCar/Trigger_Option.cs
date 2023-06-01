@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Trigger_Option : MonoBehaviour
 {
-    public int idRespuesta = -1;
     private GameManager gamemanager;
-    public bool esCorrecta = false;
     private TopDownCar_Manager controller;
+    private TimeManager tm;
 
     void Start()
     {
@@ -17,27 +16,15 @@ public class Trigger_Option : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!controller.hasSelectedAnswer)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Opción");
-            controller.tm.Stop();
-            StartCoroutine(FinishGame(esCorrecta, idRespuesta));
+            if (!controller.gameOver)
+            {
+                controller.StopTime();
+                controller.HideUI();
+                controller.gameOver = true;
+            }
         }
-    }
-
-    IEnumerator FinishGame(bool win, int idRespuesta)
-    {
-        controller.hasSelectedAnswer = true; 
-        yield return new WaitForSeconds(2);
-        controller.gameOver = true;
-        yield return new WaitForSeconds(3);
-        if (win)
-        {
-            gamemanager.OnCorrectAnswer(idRespuesta);
-        }
-        else
-        {
-            gamemanager.OnWrongAnswer(idRespuesta);
-        }
+   
     }
 }

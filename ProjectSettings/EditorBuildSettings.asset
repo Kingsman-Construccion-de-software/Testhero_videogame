@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Login/ExamCompleted.unity
+    guid: 28222885b333bca42a8abb2ca5e807d7
+  - enabled: 1
     path: Assets/Scenes/Login/Login.unity
     guid: b3777b460ee2c32479401235c2cd13da
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Login/ExamPreview.unity
     guid: 7d2674ee873d8e446be0c0c8b861b4fc
-  - enabled: 1
-    path: Assets/Scenes/Login/ExamCompleted.unity
-    guid: 28222885b333bca42a8abb2ca5e807d7
   - enabled: 1
     path: Assets/Scenes/Process/Ranking.unity
     guid: 0d96c4b5c02afc44fba8dd8ad6d82ef3
@@ -32,9 +32,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Maze.unity
     guid: b235b0cbd49da7d489b9e99d15d5b073
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Minigames/WaterMole.unity
     guid: 45d9e720175ba774fbeaf79595122f91
+  - enabled: 1
+    path: Assets/Scenes/Minigames/TopDownCar.unity
+    guid: d1cec6ddf85450f4ebcd39d51f4270af
   - enabled: 1
     path: Assets/Scenes/Process/Feedback.unity
     guid: ebde59b6a057bbb40905b828b307b1c4

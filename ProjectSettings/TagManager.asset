@@ -10,6 +10,8 @@ TagManager:
   - Chest
   - Content
   - Trigger
+  - Obstacle
+  - NonObstacle
   layers:
   - Default
   - TransparentFX

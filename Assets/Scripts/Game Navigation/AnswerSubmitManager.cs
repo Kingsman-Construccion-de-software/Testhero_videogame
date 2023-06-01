@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class AnswerData{
-    public int IdAlumno;
-    public int IdPregunta;
-    public int IdRespuesta;
-}
-
 public class AnswerSubmitManager : MonoBehaviour
 {
     public int IdPregunta {get; set; }
