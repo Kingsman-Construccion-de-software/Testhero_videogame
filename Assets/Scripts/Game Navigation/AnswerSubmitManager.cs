@@ -10,6 +10,13 @@ public class AnswerSubmitManager : MonoBehaviour
 
     public void SendAnswer()
     {
+        //datos para pruebas
+        //TODO: Remover antes de deployment
+        if (PlayerPrefs.GetInt("IdExamen") == -1)
+        {
+            return;
+        }
+
         StartCoroutine("PostAnswer");
     }
 

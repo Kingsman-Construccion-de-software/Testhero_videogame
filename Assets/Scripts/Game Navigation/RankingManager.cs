@@ -22,6 +22,14 @@ public class RankingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //datos para pruebas
+        //TODO: Remover antes de deployment
+        if (PlayerPrefs.GetInt("IdExamen") == -1)
+        {
+            sc = FindObjectOfType<SceneController>();
+            return;
+        }
+
         sc = FindObjectOfType<SceneController>();
         StartCoroutine("GetScores");
     }

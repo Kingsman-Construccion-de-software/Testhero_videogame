@@ -16,6 +16,13 @@ public class ExamConnectionManager : MonoBehaviour
 
     public void SubmitExam()
     {
+        //datos para pruebas
+        //TODO: Remover antes de deployment
+        if (PlayerPrefs.GetInt("IdExamen") == -1)
+        {
+            return;
+        }
+
         StartCoroutine("PostExam");
     }
 

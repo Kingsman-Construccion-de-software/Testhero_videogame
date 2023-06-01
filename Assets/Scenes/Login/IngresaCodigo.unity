@@ -282,7 +282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "No eres parte de este grupo. Cons\xFAltalo con tu profesor"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71ff4b2666883394298318271101d872, type: 2}
   m_sharedMaterial: {fileID: 4215140770429051439, guid: 71ff4b2666883394298318271101d872, type: 2}
