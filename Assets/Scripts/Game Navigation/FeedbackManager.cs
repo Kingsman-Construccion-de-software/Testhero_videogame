@@ -15,6 +15,7 @@ public class FeedbackManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<BackgroundMusic>().PlayPuntos();
         gameManager = FindObjectOfType<GameManager>();
         int points = gameManager.GetAddedPoints();
         if (points > 0)
@@ -27,6 +28,7 @@ public class FeedbackManager : MonoBehaviour
             textoPuntos.text = points.ToString();
         }
     }
+
 
     // Update is called once per frame
     void Update()

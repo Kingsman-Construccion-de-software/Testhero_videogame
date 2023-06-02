@@ -29,12 +29,17 @@ public class PlatformerManager : MonoBehaviour
 
     List<GameObject> chestGameObjects = new List<GameObject>();
 
+    private AudioSource aus;
+    [SerializeField] private AudioClip correct;
+    [SerializeField] private AudioClip incorrect;
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         pregunta = gameManager.GetCurrentQuestion();
         preguntaText.text = pregunta.textoPregunta;
+        aus = GetComponent<AudioSource>();
         //crear cofres en la escena
         for (int i = 0; i < 4; i++)
         {
@@ -82,6 +87,8 @@ public class PlatformerManager : MonoBehaviour
         ClearAnswers();
         gameOver = true;
         tm.Stop();
+        aus.clip = correct;
+        aus.Play();
         StartCoroutine(FinishGame(true, idRespuesta));
     }
 
@@ -90,6 +97,8 @@ public class PlatformerManager : MonoBehaviour
         ClearAnswers();
         gameOver = true;
         tm.Stop();
+        aus.clip = incorrect;
+        aus.Play();
         StartCoroutine(FinishGame(false, idRespuesta));
     }
 

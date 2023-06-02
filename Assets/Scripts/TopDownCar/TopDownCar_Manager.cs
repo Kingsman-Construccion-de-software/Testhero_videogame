@@ -38,10 +38,10 @@ public class TopDownCar_Manager : MonoBehaviour
 
     List<Vector3> positions = new List<Vector3>
     {
-        new Vector3(-5.4f, 6f, 0),
-        new Vector3(-1.8f, 6f, 0),
-        new Vector3(1.8f, 6f, 0),
-        new Vector3(5.4f, 6f, 0),
+        new Vector3(-6f, 6f, 0),
+        new Vector3(-2f, 6f, 0),
+        new Vector3(2f, 6f, 0),
+        new Vector3(6f, 6f, 0),
     };
 
     void Start()

@@ -12,6 +12,7 @@ TagManager:
   - Trigger
   - Obstacle
   - NonObstacle
+  - UI
   layers:
   - Default
   - TransparentFX

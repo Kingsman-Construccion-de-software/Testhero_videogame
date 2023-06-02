@@ -36,8 +36,8 @@ public class MazeManager : MonoBehaviour
     {
         new Vector3(-1.5f, 7.7f, 0),
         new Vector3(7.6f, -0.4f, 0),
+        new Vector3(-10.4f, 0.6f, 0),
         new Vector3(-0.5f, -7.5f, 0),
-        new Vector3(-10.4f, 0.6f, 0)
     };
 
     void Start()

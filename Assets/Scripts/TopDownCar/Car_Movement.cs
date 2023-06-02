@@ -35,7 +35,7 @@ public class Car_Movement : MonoBehaviour
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
             transform.rotation = Quaternion.Lerp(
                 transform.rotation,
-                Quaternion.Euler(0, 0, 43),
+                Quaternion.Euler(0, 0, -137),
                 rotationSpeed * Time.deltaTime
             );
         }
@@ -48,11 +48,11 @@ public class Car_Movement : MonoBehaviour
                 rotationSpeed * Time.deltaTime
             );
         }
-        if (transform.rotation.z != 90)
+        if (transform.rotation.z != 0)
         {
             transform.rotation = Quaternion.Lerp(
                 transform.rotation,
-                Quaternion.Euler(0, 0, 90),
+                Quaternion.Euler(0, 0, 0),
                 10f * Time.deltaTime
             );
         }

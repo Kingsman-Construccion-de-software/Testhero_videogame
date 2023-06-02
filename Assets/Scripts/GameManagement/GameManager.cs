@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     private ExamConnectionManager examConnection;
     private AnswerSubmitManager asm;
 
+    private BackgroundMusic bm;
+
     public Pregunta GetCurrentQuestion()
     {
         return currentQuestion;
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
         currentGame = 0;
         totalPoints = 0;
         InitializeMinigames();
+        bm = FindObjectOfType<BackgroundMusic>();
         sc = FindObjectOfType<SceneController>();
         DontDestroyOnLoad(this.gameObject);
     }
@@ -84,7 +87,7 @@ public class GameManager : MonoBehaviour
             Minigame.MarioGame,
             Minigame.Maze,
             Minigame.TopDownCar,
-            Minigame.WaterMole,
+            //Minigame.WaterMole,
             Minigame.Spaceship,
         };
         currMinigames = new List<Minigame>();
@@ -227,6 +230,7 @@ public class GameManager : MonoBehaviour
     void OpenMinigame(Minigame minigame)
     {
         sc.CambiaEscena(minigame.ToString());
+        bm.PlayMinigame((int) minigame);
     }
 
 }

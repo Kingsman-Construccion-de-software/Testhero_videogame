@@ -47,8 +47,16 @@ public class MoveCamara : MonoBehaviour
                 Camera.main.transform.Translate(0, -verticalOffset, 0);
             }
 
+            //stop time and select answer
             controller.tm.Stop();
             controller.hasSelectedAnswer = true;
+            //hide ui objects
+            GameObject[] UIObjs = GameObject.FindGameObjectsWithTag("UI");
+            foreach(GameObject go in UIObjs)
+            {
+                go.SetActive(false);
+            }
+            //start coroutine to finish game
             StartCoroutine(FinishGame(esCorrecta, idRespuesta));
         }
         

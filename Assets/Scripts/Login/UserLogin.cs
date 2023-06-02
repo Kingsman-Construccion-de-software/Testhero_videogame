@@ -17,6 +17,11 @@ public class UserLogin : MonoBehaviour
     [SerializeField] TMP_Text errorPassword;
     [SerializeField] TMP_Text errorLogin;
 
+    public void Start()
+    {
+        FindObjectOfType<BackgroundMusic>().PlayInicio();
+    }
+
 
     public void validateAlumno()
     {

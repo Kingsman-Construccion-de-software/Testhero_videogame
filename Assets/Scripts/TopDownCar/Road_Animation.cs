@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Road_Animation : MonoBehaviour
 {
-    public Renderer meshRenderer;
-    public float speed = 0.5f;
-    private TopDownCar_Manager controller;
-
+    public float speed = 10f;
+    private Vector3 initialPosition;
+    private BoxCollider2D collider;
+    private float boundy;
 
     private void Start()
     {
-        controller = FindObjectOfType<TopDownCar_Manager>();
+        initialPosition = transform.position;
+        collider = GetComponent<BoxCollider2D>();
+        boundy = initialPosition.y - collider.size.y / 2;
     }
 
     void Update()
     {
-        meshRenderer.material.mainTextureOffset += new Vector2(0, speed * Time.deltaTime);
+        transform.position += Time.deltaTime * speed * Vector3.down;
+        if(transform.position.y < boundy)
+        {
+            transform.position = initialPosition;
+        }
     }
 
 }
