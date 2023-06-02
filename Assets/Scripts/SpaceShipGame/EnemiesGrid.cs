@@ -17,11 +17,16 @@ public class EnemiesGrid : MonoBehaviour {
     public Color[] colors = {Color.magenta, Color.green, Color.blue, Color.yellow};
     public float missileAttackRate = 1.0f;
 
-    private void Awake() {
+    public SpaceShipGameController controller;
+
+    private void Start() {
         optionsCoords = new int[optionsQty, 2];
         this.generateRandomOptions();
 
+        Debug.Log(controller.ans);
+
         int colorsCounter = 0;
+
         for(int row =0;row<this.rows;row++) {
             float width = gridSpace * (this.columns - 1);
             float height = gridSpace * (this.rows - 1);
@@ -30,6 +35,7 @@ public class EnemiesGrid : MonoBehaviour {
 
             for(int col=0;col<this.columns;col++) {
                 Enemy enemy = Instantiate(this.prefabs[row], this.transform);
+                enemy.controller = controller;
                 enemy.killed += EnemyKilled;
 
                 for(int i=0;i<optionsQty;i++) {
@@ -38,6 +44,10 @@ public class EnemiesGrid : MonoBehaviour {
 
                     if(x == col && y == row) {
                         enemy.GetComponent<Renderer>().material.color = colors[colorsCounter];
+                        if(controller.ans == colorsCounter) {
+                            enemy.haveCorrectedAnswer = true;
+                        }
+                        enemy.colorId = colorsCounter;
                         colorsCounter++;
                         break;
                     }
@@ -48,9 +58,7 @@ public class EnemiesGrid : MonoBehaviour {
                 enemy.transform.localPosition = position;
             }
         }
-    }
 
-    private void Start() {
         InvokeRepeating(nameof(MissilAttack), this.missileAttackRate, this.missileAttackRate);
     }
 
@@ -75,13 +83,6 @@ public class EnemiesGrid : MonoBehaviour {
 
             optionsCoords[i, 0] = x;
             optionsCoords[i, 1] = y;
-        }
-
-        for(int i=0;i<optionsQty;i++) {
-            Debug.Log("Coordenada " + i);
-            for(int j=0;j<2;j++) {
-                Debug.Log(optionsCoords[i, j]);
-            }
         }
     }
 
