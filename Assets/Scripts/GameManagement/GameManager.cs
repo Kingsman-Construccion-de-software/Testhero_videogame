@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
             Minigame.MarioGame,
             Minigame.Maze,
             Minigame.TopDownCar,
-            //Minigame.WaterMole,
+            Minigame.WaterMole,
             Minigame.Spaceship,
         };
         currMinigames = new List<Minigame>();
@@ -105,8 +105,9 @@ public class GameManager : MonoBehaviour
             
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
-                currMinigames.Add(allMinigames[3]);
+                currMinigames.Add(allMinigames[i]);
             }
+            
             
             
             currentQuestion = qm.GetPregunta(0);

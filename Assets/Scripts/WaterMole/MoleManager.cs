@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class MoleManager : MonoBehaviour
 {
-    [SerializeField] GameObject BubbleArea;
-
     [SerializeField]
     private TMP_Text preguntaTexto;
 
@@ -14,18 +12,28 @@ public class MoleManager : MonoBehaviour
     private TMP_Text tiempoText;
 
     [SerializeField]
-    private float tiempoPregunta = 30f;
+    private float tiempoPregunta = 15f;
 
     [SerializeField]
-    private List<GameObject> answerSprites; // List of answer sprites
+    private List<TMP_Text> textosRespuestas; // List of answer sprites
 
     public bool gameOver = false;
+
+    [SerializeField]
+    private GameObject fish;
+
+    private AudioSource aus;
+    [SerializeField]
+    private AudioClip win;
+    [SerializeField]
+    private AudioClip lose;
+
     List<Vector3> positions = new List<Vector3>
     {
-        new Vector3(-16f, 4.3f, 0),
-        new Vector3(-0.2f, -1.2f, 0),
-        new Vector3(16.5f, -6.2f, 0),
-        new Vector3(0f, -0.5f, 0)
+        new Vector3(-8f, -0.67f, 0),
+        new Vector3(-4.4f, -6.2f, 0),
+        new Vector3(5.9f, -4.4f, 0),
+        new Vector3(9.9f, -0.3f, 0)
     };
 
     private TimeManager tm;
@@ -42,13 +50,24 @@ public class MoleManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             Respuesta res = pregunta.respuestas[i];
-            TMP_Text answerText = answerSprites[i].GetComponentInChildren<TMP_Text>();
-            answerText.text = res.textoRespuesta;
+            textosRespuestas[i].text = res.textoRespuesta;
+            
+            GameObject go = Instantiate(fish, positions[i], fish.transform.rotation);
+            FishSpawn fishScript = go.GetComponent<FishSpawn>();
+            fishScript.idRespuesta = res.idRespuesta;
+            if (res.esCorrecta == 1)
+            {
+                fishScript.esCorrecta = true;
+            } else
+            {
+                fishScript.esCorrecta = false;
+            }
         }
 
         // cargar el tiempo
         tm = gamemanager.GetTimeManager();
         tm.SetTimeRemaining(tiempoPregunta);
+        aus = GetComponent<AudioSource>();
     }
 
     private bool playerInsideCollider = false; // Flag to track if the player is inside the collider
@@ -95,6 +114,8 @@ public class MoleManager : MonoBehaviour
     {
         ClearAnswers();
         gameOver = true;
+        aus.clip = win;
+        aus.Play();
         tm.Stop();
         StartCoroutine(FinishGame(true, idRespuesta));
     }
@@ -103,15 +124,18 @@ public class MoleManager : MonoBehaviour
     {
         ClearAnswers();
         gameOver = true;
+        aus.clip = lose;
+        aus.Play();
         tm.Stop();
         StartCoroutine(FinishGame(false, idRespuesta));
     }
 
     void ClearAnswers()
     {
-        foreach (GameObject answerSprite in answerSprites)
+        GameObject[] uis = GameObject.FindGameObjectsWithTag("UI");
+        foreach (GameObject ui in uis)
         {
-            answerSprite.SetActive(false);
+            ui.SetActive(false);
         }
     }
 

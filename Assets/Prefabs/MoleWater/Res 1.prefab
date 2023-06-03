@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8399997788012164827, guid: 70185b1ba26f3704d8633e01c8449505, type: 3}
       propertyPath: m_text
-      value: "Organizaci\xF3n de las Naciones Unidas"
+      value: Res
       objectReference: {fileID: 0}
     - target: {fileID: 8399997788012164827, guid: 70185b1ba26f3704d8633e01c8449505, type: 3}
       propertyPath: m_fontColor.b

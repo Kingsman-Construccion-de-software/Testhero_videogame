@@ -47,7 +47,7 @@ public class ObstacleCrash : MonoBehaviour
                 aus.Play();
                 controller.reachedEnd = true;
                 collision.gameObject.GetComponent<AudioSource>().Stop();
-                StartCoroutine(FinishGame(true, idRespuesta));
+                StartCoroutine(FinishGame(false, idRespuesta));
             }
         }
     }
