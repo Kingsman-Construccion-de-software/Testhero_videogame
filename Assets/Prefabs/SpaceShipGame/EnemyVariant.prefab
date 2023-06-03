@@ -21,12 +21,12 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 92c432c4dbf0b4701963e7487700dbd0, type: 3}
     - target: {fileID: 2254582390395965864, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: EnemyVariant
       objectReference: {fileID: 0}
     - target: {fileID: 4326504955859466541, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6f6427dbc7bfb4e3a99169ebd912b443, type: 3}
+      objectReference: {fileID: -1214077917, guid: b961746484645254daee89feaffdf8f4, type: 3}
     - target: {fileID: 4326504955859466541, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -61,11 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold

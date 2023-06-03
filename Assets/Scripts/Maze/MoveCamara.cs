@@ -12,12 +12,16 @@ public class MoveCamara : MonoBehaviour
     private GameManager gamemanager;
     public bool esCorrecta = false;
     private MazeManager controller;
+    private AudioSource aus;
+    [SerializeField] private AudioClip correct;
+    [SerializeField] private AudioClip incorrect;
+
     // Start is called before the first frame update
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
         controller = FindObjectOfType<MazeManager>();
-
+        aus = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,6 +60,17 @@ public class MoveCamara : MonoBehaviour
             {
                 go.SetActive(false);
             }
+
+            if (esCorrecta)
+            {
+                aus.clip = correct;
+                aus.Play();
+            } else
+            {
+                aus.clip = incorrect;
+                aus.Play();
+            }
+
             //start coroutine to finish game
             StartCoroutine(FinishGame(esCorrecta, idRespuesta));
         }
@@ -66,7 +81,7 @@ public class MoveCamara : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         controller.gameOver = true;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         if (win)
         {
             gamemanager.OnCorrectAnswer(idRespuesta);
