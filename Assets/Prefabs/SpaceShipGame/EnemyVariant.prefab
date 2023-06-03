@@ -8,8 +8,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5511916244236319533, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 4410349191951564144, guid: c38a04ecf073c25448835a1ada169fa0, type: 3}
+    - target: {fileID: -5511916244236319533, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: animationSprites.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5511916244236319533, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: animationSprites.Array.data[0]
@@ -33,11 +37,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 1.2529924
       objectReference: {fileID: 0}
     - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 1.4952192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.12649632
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.24760963
       objectReference: {fileID: 0}
     - target: {fileID: 5008019650314632330, guid: 402f19cf089904038b62bc596ee5f646, type: 3}
       propertyPath: m_IsTrigger

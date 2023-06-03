@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
             
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
-                currMinigames.Add(allMinigames[1]);
+                currMinigames.Add(allMinigames[3]);
             }
             
             

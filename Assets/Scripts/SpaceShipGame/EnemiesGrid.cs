@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemiesGrid : MonoBehaviour {
-    public Enemy[] prefabs;
+    public GameObject prefab;
     public Projectile missilePrefab;
     public int rows = 4;
     public int columns = 5;
@@ -14,7 +14,7 @@ public class EnemiesGrid : MonoBehaviour {
     public int totalEnemies => this.rows * this.columns;
     public int totalEnemiesAlive => this.totalEnemies - this.enemiesAmountKilled;
     public float percentKilled => (float)this.enemiesAmountKilled / (float)this.totalEnemies;
-    public Color[] colors = {Color.magenta, Color.green, Color.blue, Color.yellow};
+    public List<Sprite> sprites = new List<Sprite>();
     public float missileAttackRate = 1.0f;
 
     public SpaceShipGameController controller;
@@ -23,7 +23,6 @@ public class EnemiesGrid : MonoBehaviour {
         optionsCoords = new int[optionsQty, 2];
         this.generateRandomOptions();
 
-        Debug.Log(controller.ans);
 
         int colorsCounter = 0;
 
@@ -34,16 +33,16 @@ public class EnemiesGrid : MonoBehaviour {
             Vector3 rowPos = new Vector3(centering.x, centering.y + (row * gridSpace), 0.0f);
 
             for(int col=0;col<this.columns;col++) {
-                Enemy enemy = Instantiate(this.prefabs[row], this.transform);
+                GameObject go = Instantiate(this.prefab, this.transform);
+                Enemy enemy = go.GetComponent<Enemy>();
                 enemy.controller = controller;
-                enemy.killed += EnemyKilled;
 
                 for(int i=0;i<optionsQty;i++) {
                     int x = optionsCoords[i, 0];
                     int y = optionsCoords[i, 1];
 
                     if(x == col && y == row) {
-                        enemy.GetComponent<Renderer>().material.color = colors[colorsCounter];
+                        go.GetComponent<SpriteRenderer>().sprite = sprites[colorsCounter];
                         if(controller.ans == colorsCounter) {
                             enemy.haveCorrectedAnswer = true;
                         }
@@ -87,16 +86,23 @@ public class EnemiesGrid : MonoBehaviour {
     }
 
     private void MissilAttack() {
-        foreach(Transform enemy in this.transform) {
-            if(!enemy.gameObject.activeInHierarchy) {
-                continue;
-            }
 
-            if(Random.value < (1.0f / (float)this.totalEnemiesAlive)) {
-                Instantiate(this.missilePrefab, enemy.position, Quaternion.identity);
-                break;
+        if (!controller.gameOver) {
+            foreach (Transform enemy in this.transform)
+            {
+                if (!enemy.gameObject.activeInHierarchy)
+                {
+                    continue;
+                }
+
+                if (Random.value < (1.0f / (float)this.totalEnemiesAlive))
+                {
+                    Instantiate(this.missilePrefab, enemy.position, Quaternion.identity);
+                    break;
+                }
             }
         }
+
     }
 
     private void EnemyKilled() {
