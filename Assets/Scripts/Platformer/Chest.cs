@@ -18,7 +18,6 @@ public class Chest : MonoBehaviour
     [SerializeField] private GameObject gem;
     [SerializeField] private GameObject skull;
 
-    [SerializeField] private GameManager gameManager;
 
     public int IdRespuesta { get; set; }
 

@@ -21,6 +21,12 @@ public class SpaceShipGameController : MonoBehaviour
     [SerializeField] TMP_Text AnswerOptionText3;
     [SerializeField] TMP_Text AnswerOptionText4;
 
+    public bool gameOver = false;
+    private AudioSource aus;
+    [SerializeField] private AudioClip correct;
+    [SerializeField] private AudioClip incorrect;
+
+
     void Awake() {
         _GameManager = FindObjectOfType<GameManager>();
         Question = _GameManager.GetCurrentQuestion();
@@ -52,6 +58,7 @@ public class SpaceShipGameController : MonoBehaviour
 
         tm = _GameManager.GetTimeManager();
         tm.SetTimeRemaining(tiempoPregunta);
+        aus = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -75,18 +82,35 @@ public class SpaceShipGameController : MonoBehaviour
     public void OnCorrectAnswer(int idRespuesta)
     {
         tm.Stop();
-        StartCoroutine(FinishGame(true, idRespuesta));
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach(Enemy e in enemies)
+        {
+            e.Explode();
+        }
+        aus.clip = correct;
+        aus.Play();
+        StartCoroutine(FinishGame(true, Question.respuestas[idRespuesta].idRespuesta));
     }
 
     public void OnWrongAnswer(int idRespuesta)
     {
         tm.Stop();
-        StartCoroutine(FinishGame(false, idRespuesta));
+        FindObjectOfType<Player>().Explode();
+        aus.clip = incorrect;
+        aus.Play();
+        if (idRespuesta != -1)
+        {
+            StartCoroutine(FinishGame(false, Question.respuestas[idRespuesta].idRespuesta));
+        } else
+        {
+            StartCoroutine(FinishGame(false, -1));
+        }
     }
 
     IEnumerator FinishGame(bool win, int idRespuesta)
     {
-        yield return new WaitForSeconds(3);
+        gameOver = true;
+        yield return new WaitForSeconds(2);
         if (win)
         {
             _GameManager.OnCorrectAnswer(idRespuesta);
