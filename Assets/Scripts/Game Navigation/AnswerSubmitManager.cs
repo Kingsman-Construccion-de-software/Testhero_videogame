@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class AnswerSubmitManager : MonoBehaviour
 {
     public int IdPregunta {get; set; }
-    public int IdRespuesta { get; set; }
+    public int? IdRespuesta { get; set; }
 
     public void SendAnswer()
     {

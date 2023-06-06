@@ -100,14 +100,14 @@ public class GameManager : MonoBehaviour
         {
             respuestas = new List<int>();
 
-            //currMinigames = ChooseGames(qm.GetPreguntasSize());
+            currMinigames = ChooseGames(qm.GetPreguntasSize());
 
-            
+            /*
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
                 currMinigames.Add(allMinigames[i]);
             }
-            
+            */
             
             
             currentQuestion = qm.GetPregunta(0);
@@ -204,6 +204,10 @@ public class GameManager : MonoBehaviour
             {
                 asm.IdPregunta = qm.GetPregunta(i).idPregunta;
                 asm.IdRespuesta = respuestas[i];
+                if(asm.IdRespuesta == -1)
+                {
+                    asm.IdRespuesta = null;
+                }
                 asm.SendAnswer();
             }
         } else
