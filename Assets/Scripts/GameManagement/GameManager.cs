@@ -204,10 +204,7 @@ public class GameManager : MonoBehaviour
             {
                 asm.IdPregunta = qm.GetPregunta(i).idPregunta;
                 asm.IdRespuesta = respuestas[i];
-                if(asm.IdRespuesta == -1)
-                {
-                    asm.IdRespuesta = null;
-                }
+               
                 asm.SendAnswer();
             }
         } else
