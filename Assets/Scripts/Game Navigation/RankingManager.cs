@@ -42,7 +42,7 @@ public class RankingManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            sc.CambiaEscena("Final");
+            sc.CambiaEscena("Tickets");
         }
     }
 

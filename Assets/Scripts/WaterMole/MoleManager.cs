@@ -30,11 +30,12 @@ public class MoleManager : MonoBehaviour
 
     List<Vector3> positions = new List<Vector3>
     {
-        new Vector3(-8f, -0.67f, 0),
-        new Vector3(-4.4f, -6.2f, 0),
-        new Vector3(5.9f, -4.4f, 0),
-        new Vector3(9.9f, -0.3f, 0)
+        new Vector3(-11.1f, -1.2f, 0),
+        new Vector3(-5.4f, -6.5f, 0),
+        new Vector3(2.9f, -5.8f, 0),
+        new Vector3(5.8f, -0.8f, 0)
     };
+
 
     private TimeManager tm;
 
