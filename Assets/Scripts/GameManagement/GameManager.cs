@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     //variables para el manejo del poder de repetir pregunta
     private List<int> incorrectQuestions = new List<int>();
     private bool retrying = false;
+    private int retryingIndex = 0;
 
     //variable para el manejo del poder de marcar incorrecto
     private bool markIncorrect = false;
@@ -162,13 +163,14 @@ public class GameManager : MonoBehaviour
         {
             respuestas = new List<int>();
 
-            //currMinigames = ChooseGames(qm.GetPreguntasSize());
+            currMinigames = ChooseGames(qm.GetPreguntasSize());
 
-            
+            /*
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
-                currMinigames.Add(allMinigames[2]);
+                currMinigames.Add(allMinigames[3]);
             }
+            */
             
             
             
@@ -245,7 +247,16 @@ public class GameManager : MonoBehaviour
         markIncorrect = false;
 
         respuestasCorrectas++;
-        respuestas.Add(idRespuesta);
+
+        if (retrying)
+        {
+            respuestas[retryingIndex] = idRespuesta;
+        }
+        else
+        {
+            respuestas.Add(idRespuesta);
+        }
+
     }
 
 
@@ -260,7 +271,14 @@ public class GameManager : MonoBehaviour
 
         incorrectQuestions.Add(currentGame);
 
-        respuestas.Add(idRespuesta);
+        if (retrying)
+        {
+            respuestas[retryingIndex] = idRespuesta;
+        } else
+        {
+            respuestas.Add(idRespuesta);
+        }
+        
     }
 
     public void RetryQuestion()
@@ -274,7 +292,9 @@ public class GameManager : MonoBehaviour
         if (retrying) {
             System.Random rnd = new System.Random();
             int index = rnd.Next(incorrectQuestions.Count);
-            currentQuestion = qm.GetPregunta(index);
+            retryingIndex = incorrectQuestions[index];
+            currentQuestion = qm.GetPregunta(retryingIndex);
+            incorrectQuestions.RemoveAt(index);
             currMinigames = ChooseGames(qm.GetPreguntasSize());
             LoadNextGame();
             retrying = false;

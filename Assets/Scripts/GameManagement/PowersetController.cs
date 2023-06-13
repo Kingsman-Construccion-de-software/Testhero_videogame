@@ -46,6 +46,11 @@ public class PowersetController : MonoBehaviour
                 unavailable[2] = true;
                 powers[1].color = new Color(0.5f, 0.5f, 0.5f, 1);
                 powers[2].color = new Color(0.5f, 0.5f, 0.5f, 1);
+                if(gameManager.GetNumberIncorrect() == 0)
+                {
+                    unavailable[2] = true;
+                    powers[2].color = new Color(0.5f, 0.5f, 0.5f, 1);
+                }
             }
             else
             {

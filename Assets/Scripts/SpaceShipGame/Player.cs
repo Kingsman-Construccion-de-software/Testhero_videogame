@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     private float minX = -19f;
     private float maxX = 19f;
 
+    private bool invincible = false;
+    private float invicbilityTime = 1.5f;
+    private float invincibilityDelta = 0.15f;
+
 
     void Start()
     {
@@ -67,8 +71,39 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.layer == LayerMask.NameToLayer("Missile") && !controller.gameOver) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+            if (!invincible)
+            {
+                StartCoroutine(MakeInvincible());
+            }
         }
     }
+
+    IEnumerator MakeInvincible()
+    {
+        invincible = true;
+
+        float time = 0;
+        bool show = true;
+        SpriteRenderer sp = GetComponent<SpriteRenderer>();
+
+        while (time < invicbilityTime) {
+            time += invincibilityDelta;
+            show = !show;
+            if (show)
+            {
+                sp.enabled = false;
+            }
+            else
+            {
+                sp.enabled = true;
+            }
+            yield return new WaitForSeconds(invincibilityDelta);
+
+        }
+
+        sp.enabled = true;
+
+        invincible = false;
+    }
+
 }

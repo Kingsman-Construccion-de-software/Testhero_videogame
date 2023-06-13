@@ -29,6 +29,11 @@ public class SpaceShipGameController : MonoBehaviour
     private PowersetController powc;
     Color timeColor;
 
+    private bool markedIncorrect = false;
+
+    [SerializeField]
+    private List<GameObject> crosses;
+
 
 
     void Awake() {
@@ -72,22 +77,31 @@ public class SpaceShipGameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!tm.IsDone())
+        if (!gameOver)
         {
-            int time = Mathf.CeilToInt(tm.GetTimeRemaining());
-            string timeT = "0:" + time.ToString();
-            timeText.text = timeT;
-            if (time <= 5)
+            if (!tm.IsDone())
             {
-                timeText.color = new Color(253/255f, 77/255f, 77/255f);
+                int time = Mathf.CeilToInt(tm.GetTimeRemaining());
+                string timeT = "0:" + time.ToString();
+                timeText.text = timeT;
+                if (time <= 5)
+                {
+                    timeText.color = new Color(253 / 255f, 77 / 255f, 77 / 255f);
+                }
+                else
+                {
+                    timeText.color = timeColor;
+                }
             }
-            else
+            else if (tm.IsDone())
             {
-                timeText.color = timeColor;
+                OnWrongAnswer(-1);
             }
-        }
-        else if(tm.IsDone()) {
-            OnWrongAnswer(-1);
+
+            if (_GameManager.ShouldMarkIncorrect() && !markedIncorrect)
+            {
+                MarkIncorrect();
+            }
         }
     }
 
@@ -121,6 +135,28 @@ public class SpaceShipGameController : MonoBehaviour
         {
             StartCoroutine(FinishGame(false, -1));
         }
+    }
+
+    private void MarkIncorrect()
+    {
+        markedIncorrect = true;
+        List<GameObject> incorrectPaths = new List<GameObject>();
+
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject cross = crosses[i];
+            Respuesta res = Question.respuestas[i];
+            if (res.esCorrecta != 1)
+            {
+                incorrectPaths.Add(cross);
+            }
+        }
+
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(3);
+        incorrectPaths[r].SetActive(true);
+
+
     }
 
     IEnumerator FinishGame(bool win, int idRespuesta)
