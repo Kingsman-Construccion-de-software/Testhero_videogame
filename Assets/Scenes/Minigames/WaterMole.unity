@@ -5334,7 +5334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3006545335242774120, guid: 89a30d58267cead468013d2740d0f59a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3006545335242774120, guid: 89a30d58267cead468013d2740d0f59a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19857,6 +19857,10 @@ PrefabInstance:
       value: -12.5
       objectReference: {fileID: 0}
     - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
       propertyPath: m_fontColor.b
       value: 0.18039216
       objectReference: {fileID: 0}
@@ -19869,8 +19873,16 @@ PrefabInstance:
       value: 0.18039216
       objectReference: {fileID: 0}
     - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281216558
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c063f0686518848bdf774aa902cd14, type: 3}

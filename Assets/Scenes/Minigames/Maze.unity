@@ -14514,7 +14514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544561101205868571, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 93.032
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4544561101205868571, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14587,6 +14587,18 @@ PrefabInstance:
     - target: {fileID: 4544561101574999508, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -7.699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544561101574999509, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c063f0686518848bdf774aa902cd14, type: 3}
