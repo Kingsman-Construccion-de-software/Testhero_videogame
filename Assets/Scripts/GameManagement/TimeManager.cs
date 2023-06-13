@@ -20,6 +20,14 @@ public class TimeManager : MonoBehaviour
     {
         return timeRemaining;
     }
+    
+    public void AddTime(float time)
+    {
+        if(timeRemaining > 0)
+        {
+            timeRemaining += time;
+        }
+    }
 
     public void Stop()
     {
@@ -31,7 +39,6 @@ public class TimeManager : MonoBehaviour
         return done;
     }
 
-    
     // Update is called once per frame
     void Update()
     {

@@ -26,6 +26,10 @@ public class SpaceShipGameController : MonoBehaviour
     [SerializeField] private AudioClip correct;
     [SerializeField] private AudioClip incorrect;
 
+    private PowersetController powc;
+    Color timeColor;
+
+
 
     void Awake() {
         _GameManager = FindObjectOfType<GameManager>();
@@ -59,6 +63,10 @@ public class SpaceShipGameController : MonoBehaviour
         tm = _GameManager.GetTimeManager();
         tm.SetTimeRemaining(tiempoPregunta);
         aus = GetComponent<AudioSource>();
+        powc = FindObjectOfType<PowersetController>();
+        timeColor = timeText.color;
+
+
     }
 
     // Update is called once per frame
@@ -72,6 +80,10 @@ public class SpaceShipGameController : MonoBehaviour
             if (time <= 5)
             {
                 timeText.color = new Color(253/255f, 77/255f, 77/255f);
+            }
+            else
+            {
+                timeText.color = timeColor;
             }
         }
         else if(tm.IsDone()) {
@@ -89,6 +101,8 @@ public class SpaceShipGameController : MonoBehaviour
         }
         aus.clip = correct;
         aus.Play();
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(true, Question.respuestas[idRespuesta].idRespuesta));
     }
 
@@ -98,6 +112,8 @@ public class SpaceShipGameController : MonoBehaviour
         FindObjectOfType<Player>().Explode();
         aus.clip = incorrect;
         aus.Play();
+        powc.SetGameOver(true);
+
         if (idRespuesta != -1)
         {
             StartCoroutine(FinishGame(false, Question.respuestas[idRespuesta].idRespuesta));

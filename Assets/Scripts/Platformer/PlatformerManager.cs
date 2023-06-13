@@ -33,6 +33,10 @@ public class PlatformerManager : MonoBehaviour
     [SerializeField] private AudioClip correct;
     [SerializeField] private AudioClip incorrect;
 
+    private PowersetController powc;
+    Color timeColor;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +44,9 @@ public class PlatformerManager : MonoBehaviour
         pregunta = gameManager.GetCurrentQuestion();
         preguntaText.text = pregunta.textoPregunta;
         aus = GetComponent<AudioSource>();
+        powc = FindObjectOfType<PowersetController>();
+        timeColor = timeText.color;
+
         //crear cofres en la escena
         for (int i = 0; i < 4; i++)
         {
@@ -72,6 +79,9 @@ public class PlatformerManager : MonoBehaviour
                 if (time <= 5)
                 {
                     timeText.color = new Color(253/255f, 77/255f, 77/255f);
+                } else
+                {
+                    timeText.color = timeColor;
                 }
             }
             else
@@ -89,6 +99,8 @@ public class PlatformerManager : MonoBehaviour
         tm.Stop();
         aus.clip = correct;
         aus.Play();
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(true, idRespuesta));
     }
 
@@ -99,6 +111,8 @@ public class PlatformerManager : MonoBehaviour
         tm.Stop();
         aus.clip = incorrect;
         aus.Play();
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(false, idRespuesta));
     }
 

@@ -40,6 +40,11 @@ public class PowerManager : MonoBehaviour
         StartCoroutine(GetPoderesAl());
     }
 
+    public void DecreaseAmount(int id)
+    {
+        StartCoroutine(UpdatePoderesAl(id, -1));
+    }
+
     IEnumerator GetPoderesAl()
     {
         int idAlumno = PlayerPrefs.GetInt("IdAlumno");
@@ -108,6 +113,49 @@ public class PowerManager : MonoBehaviour
             {
                 active[p.idPoder-1] = true;
             }
+        }
+    }
+
+
+    IEnumerator UpdatePoderesAl(int idPoder, int cantidad)
+    {
+        int idAlumno = PlayerPrefs.GetInt("IdAlumno");
+        string URL = PlayerPrefs.GetString("ApiPrefix") + "alumno/" + idAlumno + "/poderes";
+
+        AlumnoPoder ap = new AlumnoPoder();
+
+        ap.idPoder = idPoder;
+        ap.cantidad = cantidad;
+
+        string json = JsonUtility.ToJson(ap);
+
+        var req = new UnityWebRequest(URL, "PUT");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        req.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        req.SetRequestHeader("Content-Type", "application/json");
+
+        //Send the request then wait here until it returns
+        yield return req.SendWebRequest();
+
+        handleResultUpdate(req);
+
+        req.Dispose();
+    }
+
+    void handleResultUpdate(UnityWebRequest req)
+    {
+        if (req.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.Log(req.error);
+        }
+        else if (req.result == UnityWebRequest.Result.ConnectionError)
+        {
+            Debug.Log(req.error);
+        }
+        else
+        {
+            Debug.Log("Actualizado correctamente");
         }
     }
 
