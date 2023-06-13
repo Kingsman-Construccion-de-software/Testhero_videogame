@@ -9,6 +9,8 @@ using System;
 public class GameManager : MonoBehaviour
 {
 
+    public static GameManager instance;
+
     [SerializeField] private int currentGame;
 
     private SceneController sc;
@@ -118,8 +120,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetString("ApiPrefix", "https://localhost:44423/api/");
-        PlayerPrefs.Save();
+        if (instance == null)
+        {
+            PlayerPrefs.SetString("ApiPrefix", "https://localhost:44423/api/");
+            PlayerPrefs.Save();
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
     }
 
     // Start is called before the first frame update
@@ -130,7 +137,6 @@ public class GameManager : MonoBehaviour
         InitializeMinigames();
         bm = FindObjectOfType<BackgroundMusic>();
         sc = FindObjectOfType<SceneController>();
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void InitializePoderes()

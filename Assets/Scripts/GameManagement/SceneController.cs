@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 
-    private void Start()
+    public static SceneController instance;
+
+    private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
     }
 
     public void CambiaEscena(string scene)

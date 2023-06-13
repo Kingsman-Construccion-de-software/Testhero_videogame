@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BackgroundMusic : MonoBehaviour
 {
+    public static BackgroundMusic instance;
+
 
     [SerializeField]
     private AudioClip inicio;
@@ -22,10 +24,15 @@ public class BackgroundMusic : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-        aus = GetComponent<AudioSource>();
-        aus.loop = true;
-        aus.playOnAwake = true;
+        if(instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            aus = GetComponent<AudioSource>();
+            aus.loop = true;
+            aus.volume = 0.7f;
+            aus.playOnAwake = true;
+            instance = this;
+        } 
     }
 
     public void PlayInicio()
