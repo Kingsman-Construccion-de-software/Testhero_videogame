@@ -45,6 +45,9 @@ public class TopDownCar_Manager : MonoBehaviour
         new Vector3(6f, 6f, 0),
     };
 
+    Color timeColor;
+
+
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
@@ -52,6 +55,8 @@ public class TopDownCar_Manager : MonoBehaviour
         tm.SetTimeRemaining(tiempo);
         pregunta = gamemanager.GetCurrentQuestion();
         preguntaTexto.text = pregunta.textoPregunta;
+        timeColor = tiempoTexto.color;
+
         for (int i = 0; i < 4; i++)
         {
             Respuesta res = pregunta.respuestas[i];
@@ -82,6 +87,10 @@ public class TopDownCar_Manager : MonoBehaviour
                 if (time <= 5)
                 {
                     tiempoTexto.color = new Color(253 / 255f, 77 / 255f, 77 / 255f);
+                }
+                else
+                {
+                    tiempoTexto.color = timeColor;
                 }
             }
             else

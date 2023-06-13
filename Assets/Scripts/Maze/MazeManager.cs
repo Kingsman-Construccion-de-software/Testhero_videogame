@@ -40,6 +40,9 @@ public class MazeManager : MonoBehaviour
         new Vector3(-0.5f, -7.5f, 0),
     };
 
+
+    Color timeColor;
+
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
@@ -47,6 +50,9 @@ public class MazeManager : MonoBehaviour
         tm.SetTimeRemaining(tiempo);
         pregunta = gamemanager.GetCurrentQuestion();
         preguntaTexto.text = pregunta.textoPregunta;
+        timeColor = tiempoTexto.color;
+
+
         for (int i = 0; i < 4; i++)
         {
             Respuesta res = pregunta.respuestas[i];
@@ -81,11 +87,15 @@ public class MazeManager : MonoBehaviour
                 {
                     tiempoTexto.color = new Color(253 / 255f, 77 / 255f, 77 / 255f);
                 }
+                else
+                {
+                    tiempoTexto.color = timeColor;
+                }
             }
             else
             {
                 gamemanager.OnWrongAnswer(-1);
             }
-        }
+        } 
     }
 }

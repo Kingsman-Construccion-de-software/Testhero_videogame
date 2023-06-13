@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Process/Results.unity
     guid: aee19ff70322e4849906b1482fccec2e
   - enabled: 1
+    path: Assets/Scenes/Process/Tickets.unity
+    guid: e6b6b8ddc95efa4438921d3b1f407d3a
+  - enabled: 1
     path: Assets/Scenes/Process/Final.unity
     guid: 21c6cebe7626e4046975057427b859e6
   m_configObjects: {}

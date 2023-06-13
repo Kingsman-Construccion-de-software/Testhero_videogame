@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private SceneController sc;
     private QuestionManager qm;
+    private PowerManager pm;
     private TimeManager tm;
 
     private List<Minigame> allMinigames;
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] int totalPoints;
     int addedPoints;
     int respuestasCorrectas = 0;
+
+    [SerializeField] private Power[] poderesAlumno;
+    [SerializeField] private bool[] active;
 
     private ExamConnectionManager examConnection;
     private AnswerSubmitManager asm;
@@ -63,6 +67,33 @@ public class GameManager : MonoBehaviour
         return qm.GetPreguntasSize();
     }
 
+    public bool GetPowerActive(int i)
+    {
+        return active[i];
+    }
+
+    public int GetTotalPowers()
+    {
+        return poderesAlumno.Length;
+    }
+
+    public int GetPowerAmount(int i)
+    {
+        return poderesAlumno[i].cantidad;
+    }
+
+    public void DecreasePowerAmount(int i)
+    {
+        poderesAlumno[i].cantidad--;
+        int id = poderesAlumno[i].idPoder;
+        pm.DecreaseAmount(id);
+    }
+
+    public void IncreasePowerAmount(int i)
+    {
+        poderesAlumno[i].cantidad++;
+    }
+
     private void Awake()
     {
         PlayerPrefs.SetString("ApiPrefix", "https://localhost:44423/api/");
@@ -80,6 +111,12 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    void InitializePoderes()
+    {
+        poderesAlumno = pm.GetPoderesAlumno();
+        active = pm.GetActive();
+    }
+
     void InitializeMinigames()
     {
         allMinigames = new List<Minigame>
@@ -95,8 +132,12 @@ public class GameManager : MonoBehaviour
 
     public void PrepareGame()
     {
+        pm = FindObjectOfType<PowerManager>();
+        InitializePoderes();
+
         qm = FindObjectOfType<QuestionManager>();
-        if(qm.GetPreguntasSize() > 0)
+
+        if (qm.GetPreguntasSize() > 0)
         {
             respuestas = new List<int>();
 

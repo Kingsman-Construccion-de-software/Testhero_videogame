@@ -30,22 +30,31 @@ public class MoleManager : MonoBehaviour
 
     List<Vector3> positions = new List<Vector3>
     {
-        new Vector3(-8f, -0.67f, 0),
-        new Vector3(-4.4f, -6.2f, 0),
-        new Vector3(5.9f, -4.4f, 0),
-        new Vector3(9.9f, -0.3f, 0)
+        new Vector3(-11.1f, -1.2f, 0),
+        new Vector3(-5.4f, -6.5f, 0),
+        new Vector3(2.9f, -5.8f, 0),
+        new Vector3(5.8f, -0.8f, 0)
     };
+
 
     private TimeManager tm;
 
     private GameManager gamemanager;
     private Pregunta pregunta;
 
+    private PowersetController powc;
+    Color timeColor;
+
+
+
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
         pregunta = gamemanager.GetCurrentQuestion();
         preguntaTexto.text = pregunta.textoPregunta;
+        powc = FindObjectOfType<PowersetController>();
+        timeColor = tiempoText.color;
+
 
         for (int i = 0; i < 4; i++)
         {
@@ -101,6 +110,10 @@ public class MoleManager : MonoBehaviour
                 if (time <= 5)
                 {
                     tiempoText.color = new Color(253 / 255f, 77 / 255f, 77 / 255f);
+                } 
+                else
+                {
+                    tiempoText.color = timeColor;
                 }
             }
             else
@@ -117,6 +130,8 @@ public class MoleManager : MonoBehaviour
         aus.clip = win;
         aus.Play();
         tm.Stop();
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(true, idRespuesta));
     }
 
@@ -126,7 +141,9 @@ public class MoleManager : MonoBehaviour
         gameOver = true;
         aus.clip = lose;
         aus.Play();
-        tm.Stop();
+        tm.Stop(); 
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(false, idRespuesta));
     }
 
