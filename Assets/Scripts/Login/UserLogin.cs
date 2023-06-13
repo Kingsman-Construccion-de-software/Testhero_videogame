@@ -7,7 +7,7 @@ using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class UserLogin : MonoBehaviour
 {
@@ -58,7 +58,7 @@ public class UserLogin : MonoBehaviour
     {
         if (password.text.Length == 0)
         {
-            errorPassword.text = "Debes ingresar una contraseña";
+            errorPassword.text = "Debes ingresar una contraseï¿½a";
         }
     }
 
@@ -117,6 +117,16 @@ public class UserLogin : MonoBehaviour
                 sc.CambiaEscena("IngresaCodigo");
             }
         }
+    }
+
+    public void IrAPrivacidad()
+    {
+        SceneManager.LoadScene("Privacidad");
+    }
+
+    public void IrAInstrucciones()
+    {
+        SceneManager.LoadScene("Instructions");
     }
 
 }
