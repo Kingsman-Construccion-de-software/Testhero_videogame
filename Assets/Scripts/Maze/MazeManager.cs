@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MazeManager : MonoBehaviour
 {
@@ -12,7 +13,11 @@ public class MazeManager : MonoBehaviour
     private List<TMP_Text> respuestasTexto;
 
     [SerializeField]
+    private List<Image> arrows;
+
+    [SerializeField]
     private TMP_Text preguntaTexto;
+
 
     [SerializeField]
     private TMP_Text tiempoTexto;
@@ -42,6 +47,10 @@ public class MazeManager : MonoBehaviour
 
 
     Color timeColor;
+    private bool markedIncorrect = false;
+    [SerializeField]
+    private GameObject mark;
+
 
     void Start()
     {
@@ -96,6 +105,37 @@ public class MazeManager : MonoBehaviour
             {
                 gamemanager.OnWrongAnswer(-1);
             }
-        } 
+        }
+
+        if (gamemanager.ShouldMarkIncorrect() && !markedIncorrect)
+        {
+            MarkIncorrect();
+        }
     }
+
+
+    private void MarkIncorrect()
+    {
+        markedIncorrect = true;
+        List<Image> incorrectArrows = new List<Image>();
+
+        for(int i = 0; i<4; i++)
+        {
+            Image arrow = arrows[i];
+            Respuesta res = pregunta.respuestas[i];
+            if(res.esCorrecta != 1)
+            {
+                incorrectArrows.Add(arrow);
+            }
+        }
+
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(3);
+        SpriteRenderer sr = mark.GetComponent<SpriteRenderer>();
+        incorrectArrows[r].sprite = sr.sprite;
+        incorrectArrows[r].color = sr.color;
+
+
+    }
+
 }

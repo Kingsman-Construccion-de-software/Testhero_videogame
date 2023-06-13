@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class PlatformerManager : MonoBehaviour
@@ -33,8 +34,10 @@ public class PlatformerManager : MonoBehaviour
     [SerializeField] private AudioClip correct;
     [SerializeField] private AudioClip incorrect;
 
+    //variables para el control de los poderes
     private PowersetController powc;
     Color timeColor;
+    private bool markedIncorrect = false;
 
 
     // Start is called before the first frame update
@@ -88,9 +91,33 @@ public class PlatformerManager : MonoBehaviour
             {
                 OnWrongAnswer(-1);
             }
+
+            if (gameManager.ShouldMarkIncorrect() && !markedIncorrect) 
+            {
+                MarkIncorrect();                
+            }
         }
     }
+    
+    private void MarkIncorrect()
+    {
+        markedIncorrect = true;
+        List<Chest> incorrectChests = new List<Chest>();
+        foreach(GameObject chest in chestGameObjects)
+        {
+            Chest c = chest.GetComponent<Chest>();
+            if (!c.isCorrectAnswer())
+            {
+                incorrectChests.Add(c);
+            }
+        }
 
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(3);
+        incorrectChests[r].MarkIncorrect();
+
+    }
+    
 
     public void OnCorrectAnswer(int idRespuesta)
     {

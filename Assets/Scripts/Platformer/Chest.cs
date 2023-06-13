@@ -18,6 +18,8 @@ public class Chest : MonoBehaviour
     [SerializeField] private GameObject gem;
     [SerializeField] private GameObject skull;
 
+    [SerializeField] private GameObject mark;
+
 
     public int IdRespuesta { get; set; }
 
@@ -89,6 +91,11 @@ public class Chest : MonoBehaviour
         {
             Instantiate(skull, position, Quaternion.identity);
         }
+    }
+
+    public void MarkIncorrect()
+    {
+        mark.SetActive(true);
     }
 
 }

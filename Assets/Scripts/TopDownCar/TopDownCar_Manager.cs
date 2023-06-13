@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TopDownCar_Manager : MonoBehaviour
 {
@@ -46,6 +47,10 @@ public class TopDownCar_Manager : MonoBehaviour
     };
 
     Color timeColor;
+    private bool markedIncorrect = false;
+
+    [SerializeField]
+    private List<GameObject> crosses;
 
 
     void Start()
@@ -97,7 +102,35 @@ public class TopDownCar_Manager : MonoBehaviour
             {
                 gamemanager.OnWrongAnswer(-1);
             }
+
+            if (gamemanager.ShouldMarkIncorrect() && !markedIncorrect)
+            {
+                MarkIncorrect();
+            }
         }
+
+    }
+
+    private void MarkIncorrect()
+    {
+        markedIncorrect = true;
+        List<GameObject> incorrectPaths = new List<GameObject>();
+
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject cross = crosses[i];
+            Respuesta res = pregunta.respuestas[i];
+            if (res.esCorrecta != 1)
+            {
+                incorrectPaths.Add(cross);
+            }
+        }
+
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(3);
+        incorrectPaths[r].SetActive(true);
+
+
     }
 
     public void StopTime()

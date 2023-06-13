@@ -28,6 +28,7 @@ public class MoleManager : MonoBehaviour
     [SerializeField]
     private AudioClip lose;
 
+
     List<Vector3> positions = new List<Vector3>
     {
         new Vector3(-11.1f, -1.2f, 0),
@@ -45,6 +46,8 @@ public class MoleManager : MonoBehaviour
     private PowersetController powc;
     Color timeColor;
 
+    private bool markedIncorrect = false;
+    List<GameObject> fishGameObjects = new List<GameObject>();
 
 
     void Start()
@@ -71,6 +74,9 @@ public class MoleManager : MonoBehaviour
             {
                 fishScript.esCorrecta = false;
             }
+
+            fishGameObjects.Add(go);
+
         }
 
         // cargar el tiempo
@@ -120,6 +126,11 @@ public class MoleManager : MonoBehaviour
             {
                 gamemanager.OnWrongAnswer(-1);
             }
+
+            if (gamemanager.ShouldMarkIncorrect() && !markedIncorrect)
+            {
+                MarkIncorrect();
+            }
         }
     }
 
@@ -154,6 +165,26 @@ public class MoleManager : MonoBehaviour
         {
             ui.SetActive(false);
         }
+    }
+
+
+    private void MarkIncorrect()
+    {
+        markedIncorrect = true;
+        List<FishSpawn> incorrectFish = new List<FishSpawn>();
+        foreach (GameObject fish in fishGameObjects)
+        {
+            FishSpawn fs = fish.GetComponent<FishSpawn>();
+            if (!fs.esCorrecta)
+            {
+                incorrectFish.Add(fs);
+            }
+        }
+
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(3);
+        incorrectFish[r].MarkIncorrect();
+
     }
 
     IEnumerator FinishGame(bool win, int idRespuesta)

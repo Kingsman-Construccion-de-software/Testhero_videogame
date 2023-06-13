@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -32,6 +33,10 @@ public class FishSpawn : MonoBehaviour
     [SerializeField] private GameObject winObject;
     [SerializeField] private GameObject loseObject;
     [SerializeField] private GameObject splashObject;
+
+    [SerializeField] private GameObject mark;
+    private bool marked = false;
+
 
     private void Start()
     {
@@ -145,6 +150,10 @@ public class FishSpawn : MonoBehaviour
         rb2d.gravityScale = 0.5f;
         jumping = true;
         GameObject go = Instantiate(splashObject, transform.position, Quaternion.identity);
+        if (marked)
+        {
+            mark.SetActive(true);
+        }
         Destroy(go, 1.0f);
     }
 
@@ -155,6 +164,7 @@ public class FishSpawn : MonoBehaviour
         spriteRenderer.enabled = false;
         rb2d.gravityScale = 0f;
         rb2d.velocity = Vector2.zero;
+        mark.SetActive(false);
         GameObject go = Instantiate(splashObject, transform.position, Quaternion.identity);
         Destroy(go, 1.0f);
         if (!manager.gameOver)
@@ -216,6 +226,15 @@ public class FishSpawn : MonoBehaviour
         yield return new WaitForSeconds(time);
         Jump();
 
+    }
+
+    public void MarkIncorrect()
+    {
+        marked = true;
+        if (jumping)
+        {
+            mark.SetActive(true);
+        }
     }
 
 }
