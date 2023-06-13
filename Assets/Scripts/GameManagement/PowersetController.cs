@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -71,7 +72,7 @@ public class PowersetController : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-               
+                EliminateOne();
             }
         }
     }
@@ -111,6 +112,25 @@ public class PowersetController : MonoBehaviour
             int cantidad = gameManager.GetPowerAmount(0);
             cantidades[0].text = cantidad.ToString();
             powers[0].color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
+    }
+
+    void EliminateOne()
+    {
+        if (!unavailable[2] && gameManager.GetPowerAmount(2) > 0 && gameManager.GetPowerActive(2))
+        {
+            //mark an incorrect answer
+            gameManager.MarkIncorrect();
+
+            //decrease amount
+            gameManager.DecreasePowerAmount(2);
+            unavailable[2] = true;
+
+
+            //update amount in GM and UI
+            int cantidad = gameManager.GetPowerAmount(2);
+            cantidades[2].text = cantidad.ToString();
+            powers[2].color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
     }
 

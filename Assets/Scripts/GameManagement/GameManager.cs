@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
     private List<int> incorrectQuestions = new List<int>();
     private bool retrying = false;
 
+    //variable para el manejo del poder de marcar incorrecto
+    private bool markIncorrect = false;
+
     public Pregunta GetCurrentQuestion()
     {
         return currentQuestion;
@@ -102,6 +105,16 @@ public class GameManager : MonoBehaviour
         return incorrectQuestions.Count;
     }
 
+    public void MarkIncorrect()
+    {
+        markIncorrect = true;
+    }
+
+    public bool ShouldMarkIncorrect()
+    {
+        return markIncorrect;
+    }
+
     private void Awake()
     {
         PlayerPrefs.SetString("ApiPrefix", "https://localhost:44423/api/");
@@ -149,14 +162,14 @@ public class GameManager : MonoBehaviour
         {
             respuestas = new List<int>();
 
-            currMinigames = ChooseGames(qm.GetPreguntasSize());
+            //currMinigames = ChooseGames(qm.GetPreguntasSize());
 
-            /*
+            
             for (int i = 0; i < qm.GetPreguntasSize(); i++)
             {
-                currMinigames.Add(allMinigames[i]);
+                currMinigames.Add(allMinigames[1]);
             }
-            */
+            
             
             
             currentQuestion = qm.GetPregunta(0);
@@ -229,6 +242,8 @@ public class GameManager : MonoBehaviour
         addedPoints = wonPoints + time * bonusPoints;
         totalPoints += addedPoints;
 
+        markIncorrect = false;
+
         respuestasCorrectas++;
         respuestas.Add(idRespuesta);
     }
@@ -240,6 +255,8 @@ public class GameManager : MonoBehaviour
 
         addedPoints = -lostPoints;
         totalPoints += addedPoints;
+
+        markIncorrect = false;
 
         incorrectQuestions.Add(currentGame);
 
@@ -319,7 +336,6 @@ public class GameManager : MonoBehaviour
     {
         sc.CambiaEscena("Ranking");
     }
-
 
     void OpenMinigame(Minigame minigame)
     {
