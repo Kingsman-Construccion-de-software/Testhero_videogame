@@ -16,12 +16,18 @@ public class MoveCamara : MonoBehaviour
     [SerializeField] private AudioClip correct;
     [SerializeField] private AudioClip incorrect;
 
+    private PowersetController powc;
+
+
     // Start is called before the first frame update
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
         controller = FindObjectOfType<MazeManager>();
-        aus = GetComponent<AudioSource>();
+        aus = GetComponent<AudioSource>(); 
+        powc = FindObjectOfType<PowersetController>();
+
+
     }
 
     // Update is called once per frame
@@ -79,6 +85,7 @@ public class MoveCamara : MonoBehaviour
 
     IEnumerator FinishGame(bool win, int idRespuesta)
     {
+        powc.SetGameOver(true);
         yield return new WaitForSeconds(2);
         controller.gameOver = true;
         yield return new WaitForSeconds(1);

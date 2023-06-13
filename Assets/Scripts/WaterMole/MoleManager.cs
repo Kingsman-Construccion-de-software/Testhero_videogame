@@ -42,11 +42,19 @@ public class MoleManager : MonoBehaviour
     private GameManager gamemanager;
     private Pregunta pregunta;
 
+    private PowersetController powc;
+    Color timeColor;
+
+
+
     void Start()
     {
         gamemanager = FindObjectOfType<GameManager>();
         pregunta = gamemanager.GetCurrentQuestion();
         preguntaTexto.text = pregunta.textoPregunta;
+        powc = FindObjectOfType<PowersetController>();
+        timeColor = tiempoText.color;
+
 
         for (int i = 0; i < 4; i++)
         {
@@ -102,6 +110,10 @@ public class MoleManager : MonoBehaviour
                 if (time <= 5)
                 {
                     tiempoText.color = new Color(253 / 255f, 77 / 255f, 77 / 255f);
+                } 
+                else
+                {
+                    tiempoText.color = timeColor;
                 }
             }
             else
@@ -118,6 +130,8 @@ public class MoleManager : MonoBehaviour
         aus.clip = win;
         aus.Play();
         tm.Stop();
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(true, idRespuesta));
     }
 
@@ -127,7 +141,9 @@ public class MoleManager : MonoBehaviour
         gameOver = true;
         aus.clip = lose;
         aus.Play();
-        tm.Stop();
+        tm.Stop(); 
+        powc.SetGameOver(true);
+
         StartCoroutine(FinishGame(false, idRespuesta));
     }
 

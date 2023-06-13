@@ -67,6 +67,33 @@ public class GameManager : MonoBehaviour
         return qm.GetPreguntasSize();
     }
 
+    public bool GetPowerActive(int i)
+    {
+        return active[i];
+    }
+
+    public int GetTotalPowers()
+    {
+        return poderesAlumno.Length;
+    }
+
+    public int GetPowerAmount(int i)
+    {
+        return poderesAlumno[i].cantidad;
+    }
+
+    public void DecreasePowerAmount(int i)
+    {
+        poderesAlumno[i].cantidad--;
+        int id = poderesAlumno[i].idPoder;
+        pm.DecreaseAmount(id);
+    }
+
+    public void IncreasePowerAmount(int i)
+    {
+        poderesAlumno[i].cantidad++;
+    }
+
     private void Awake()
     {
         PlayerPrefs.SetString("ApiPrefix", "https://localhost:44423/api/");
