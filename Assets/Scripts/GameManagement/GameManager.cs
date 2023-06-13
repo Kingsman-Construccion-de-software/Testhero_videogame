@@ -222,7 +222,7 @@ public class GameManager : MonoBehaviour
             {
                 randomNumber = rnd.Next(0, totalN);
             } while (lastMinigames.Contains(allMinigames[randomNumber]));
-            if (lastMinigames.Count == 2)
+            if (lastMinigames.Count == 3)
             {
                 lastMinigames.RemoveAt(0);
             }
@@ -251,6 +251,7 @@ public class GameManager : MonoBehaviour
         if (retrying)
         {
             respuestas[retryingIndex] = idRespuesta;
+            retrying = false;
         }
         else
         {
@@ -269,12 +270,22 @@ public class GameManager : MonoBehaviour
 
         markIncorrect = false;
 
-        incorrectQuestions.Add(currentGame);
+        if (retrying)
+        {
+            incorrectQuestions.Add(retryingIndex);
+        }
+        else
+        {
+            incorrectQuestions.Add(currentGame);
+        }
+
 
         if (retrying)
         {
             respuestas[retryingIndex] = idRespuesta;
-        } else
+            retrying = false;
+        }
+        else
         {
             respuestas.Add(idRespuesta);
         }
@@ -297,7 +308,6 @@ public class GameManager : MonoBehaviour
             incorrectQuestions.RemoveAt(index);
             currMinigames = ChooseGames(qm.GetPreguntasSize());
             LoadNextGame();
-            retrying = false;
         } else
         {
             currentGame++;
