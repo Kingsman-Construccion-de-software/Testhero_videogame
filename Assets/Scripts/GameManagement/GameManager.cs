@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
 
     private BackgroundMusic bm;
 
+    //variables para el manejo del poder de repetir pregunta
+    private List<int> incorrectQuestions = new List<int>();
+    private bool retrying = false;
+
     public Pregunta GetCurrentQuestion()
     {
         return currentQuestion;
@@ -92,6 +96,10 @@ public class GameManager : MonoBehaviour
     public void IncreasePowerAmount(int i)
     {
         poderesAlumno[i].cantidad++;
+    }
+
+    public int GetNumberIncorrect() {
+        return incorrectQuestions.Count;
     }
 
     private void Awake()
@@ -163,6 +171,7 @@ public class GameManager : MonoBehaviour
     //seleccionar la lista de juegos evitando repeticiones por 2 turnos
     public List<Minigame> ChooseGames(int n)
     {
+       
         List<Minigame> lastMinigames = new List<Minigame>(3);
         List<Minigame> listMinigames = new List<Minigame>();
 
@@ -170,12 +179,34 @@ public class GameManager : MonoBehaviour
         int randomNumber;
         int totalN = allMinigames.Count;
 
-        for(int i = 0; i<n; i++)
+        int start = 0;
+
+        //se maneja el caso de reintento
+        //se agregan los últimos elementos a la lista de anteriores para evitar repetirlos
+        //se mantienen los elementos anteriores de la lista y se generan de nuevo los elementos restantes
+        if (retrying)
+        {
+            int numEls = Math.Min(3, currentGame + 1);
+            
+            for(int i = 0; i< numEls; i++)
+            {
+                lastMinigames.Add(currMinigames[currentGame - numEls + 1]);
+            }
+
+            start = currentGame;
+            for(int i = 0; i<currentGame; i++)
+            {
+                listMinigames.Add(currMinigames[i]);
+            }
+        } 
+
+        //se generan los elementos de manera aleatoria
+        for (int i = start; i < n; i++)
         {
             do
             {
                 randomNumber = rnd.Next(0, totalN);
-            } while(lastMinigames.Contains(allMinigames[randomNumber]));
+            } while (lastMinigames.Contains(allMinigames[randomNumber]));
             if (lastMinigames.Count == 2)
             {
                 lastMinigames.RemoveAt(0);
@@ -183,6 +214,7 @@ public class GameManager : MonoBehaviour
             lastMinigames.Add(allMinigames[randomNumber]);
             listMinigames.Add(allMinigames[randomNumber]);
         }
+        
 
         return listMinigames;
     }
@@ -209,23 +241,43 @@ public class GameManager : MonoBehaviour
         addedPoints = -lostPoints;
         totalPoints += addedPoints;
 
+        incorrectQuestions.Add(currentGame);
+
         respuestas.Add(idRespuesta);
+    }
+
+    public void RetryQuestion()
+    {
+        retrying = true;
     }
 
     public void AdvanceGame()
     {
-        currentGame++;
-        if(currentGame < qm.GetPreguntasSize())
-        {
-            //cargar siguiente minijuego
-            currentQuestion = qm.GetPregunta(currentGame);
+
+        if (retrying) {
+            System.Random rnd = new System.Random();
+            int index = rnd.Next(incorrectQuestions.Count);
+            currentQuestion = qm.GetPregunta(index);
+            currMinigames = ChooseGames(qm.GetPreguntasSize());
             LoadNextGame();
-        }
-        else
+            retrying = false;
+        } else
         {
-            //llevar a la pantalla de resultados
-            LoadSummary();
+            currentGame++;
+            if (currentGame < qm.GetPreguntasSize())
+            {
+                //cargar siguiente minijuego
+                currentQuestion = qm.GetPregunta(currentGame);
+                LoadNextGame();
+            }
+            else
+            {
+                //llevar a la pantalla de resultados
+                LoadSummary();
+            }
         }
+
+        
     }
 
     public void SaveExam()
