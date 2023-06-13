@@ -2289,6 +2289,8 @@ MonoBehaviour:
   bonusPoints: 100
   lostPoints: 500
   totalPoints: 0
+  poderesAlumno: []
+  active: 
 --- !u!4 &1268124619
 Transform:
   m_ObjectHideFlags: 0
