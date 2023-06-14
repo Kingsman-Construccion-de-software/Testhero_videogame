@@ -115,4 +115,6 @@ public class RankingManager : MonoBehaviour
             num++;
         }
     }
+
+
 }

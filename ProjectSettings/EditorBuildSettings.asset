@@ -26,21 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Spaceship.unity
     guid: dd3a35c034bb84acca35a369f858698a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Login/Privacidad.unity
     guid: fb6f366a976154b4d9c26402f6c4bfe7
   - enabled: 1
     path: Assets/Scenes/Instrucciones/Instructions.unity
     guid: 5a95386879a4e1a4e8f1e7656c4a5b9c
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Store.unity
+    guid: f8cd565162e191e4abbf6ad12448f3dd
   - enabled: 1
     path: Assets/Scenes/Minigames/WaterMole.unity
     guid: 45d9e720175ba774fbeaf79595122f91
