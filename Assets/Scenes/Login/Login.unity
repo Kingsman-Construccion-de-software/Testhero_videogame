@@ -1694,6 +1694,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b6dc04f2884eb5b46b675390b1e75e84, type: 3}
   - {fileID: 8300000, guid: 450105fcfd1e9da4398a260932444219, type: 3}
   - {fileID: 8300000, guid: c209376f9016275459a8b9b599bc845b, type: 3}
+  tienda: {fileID: 8300000, guid: 6979d52fda0579441a2122b95abaf337, type: 3}
   puntos: {fileID: 8300000, guid: 9dbfe507325cb624aa61f39d888ed43e, type: 3}
   fin: {fileID: 8300000, guid: 62869771576cf8441959e57af0cf5b78, type: 3}
 --- !u!1 &985842264

@@ -14,6 +14,9 @@ public class BackgroundMusic : MonoBehaviour
     private List<AudioClip> minijuegos;
 
     [SerializeField]
+    private AudioClip tienda;
+
+    [SerializeField]
     private AudioClip puntos;
 
     [SerializeField]
@@ -39,6 +42,14 @@ public class BackgroundMusic : MonoBehaviour
     {
         aus.Stop();
         aus.clip = inicio;
+        aus.time = 3f;
+        aus.Play();
+    }
+
+    public void PlayTienda()
+    {
+        aus.Stop();
+        aus.clip = tienda;
         aus.time = 3f;
         aus.Play();
     }

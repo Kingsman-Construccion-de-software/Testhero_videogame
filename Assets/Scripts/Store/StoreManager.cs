@@ -29,6 +29,10 @@ public class StoreManager : MonoBehaviour
     private GameManager gameManager;
     private int[] bases = new int[3] { 0, 0, 0 };
 
+    [SerializeField] AudioClip incSound;
+    [SerializeField] AudioClip decSound;
+    private AudioSource aus;
+
 
     public void IncreaseAmount(int i)
     {
@@ -39,6 +43,11 @@ public class StoreManager : MonoBehaviour
             cantidadTextos[i].text = (bases[i] + powers[i]).ToString();
             available -= costs[i];
             tickets.text = available.ToString();
+            powersImages[i].color = new Color(1f, 1f, 1f, 1);
+
+            aus.clip = incSound;
+            aus.Play();
+
         }
     }
 
@@ -51,6 +60,15 @@ public class StoreManager : MonoBehaviour
             cantidadTextos[i].text = (bases[i] + powers[i]).ToString();
             available += costs[i];
             tickets.text = available.ToString();
+
+            aus.clip = decSound;
+            aus.Play();
+
+            if (bases[i] + powers[i] == 0)
+            {
+                powersImages[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+
         }
     }
 
@@ -64,8 +82,12 @@ public class StoreManager : MonoBehaviour
     {
         sc = FindObjectOfType<SceneController>();
         StartCoroutine(GetTickets());
+        aus = GetComponent<AudioSource>();
 
         gameManager = FindObjectOfType<GameManager>();
+
+        BackgroundMusic bm = FindObjectOfType<BackgroundMusic>();
+        bm.PlayTienda();
 
 
         for (int i = 0; i < 3; i++)
@@ -151,6 +173,7 @@ public class StoreManager : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<GameManager>().InitializePoderes();
             FindObjectOfType<GameManager>().LoadNextGame();
         }
     }

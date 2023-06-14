@@ -139,8 +139,9 @@ public class GameManager : MonoBehaviour
         sc = FindObjectOfType<SceneController>();
     }
 
-    void InitializePoderes()
+    public void InitializePoderes()
     {
+        pm.ObtenerPoderes();
         poderesAlumno = pm.GetPoderesAlumno();
         active = pm.GetActive();
     }

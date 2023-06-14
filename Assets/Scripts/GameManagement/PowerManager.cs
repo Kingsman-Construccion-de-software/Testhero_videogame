@@ -35,7 +35,7 @@ public class PowerManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void Start()
+    public void ObtenerPoderes()
     {
         StartCoroutine(GetPoderesAl());
     }

@@ -11,12 +11,15 @@ public class PowersetController : MonoBehaviour
 
     [SerializeField] List<TMP_Text> cantidades;
     [SerializeField] List<Image> powers;
+    [SerializeField] AudioClip powerSound;
+    private AudioSource aus;
+    
     bool[] unavailable;
 
     private GameManager gameManager;
     private bool gameOver = false;
 
-    private int totalPoderes;
+    private int totalPoderes = 3;
 
     public void SetGameOver(bool over)
     {
@@ -27,6 +30,7 @@ public class PowersetController : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        aus = GetComponent<AudioSource>();
 
         unavailable = new bool[totalPoderes];
 
@@ -34,6 +38,7 @@ public class PowersetController : MonoBehaviour
         {
             int cantidad = gameManager.GetPowerAmount(i);
             cantidades[i].text = cantidad.ToString();
+
             if (!gameManager.GetPowerActive(i) || cantidad == 0)
             {
                 powers[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
@@ -47,8 +52,8 @@ public class PowersetController : MonoBehaviour
                 powers[2].color = new Color(0.5f, 0.5f, 0.5f, 1);
                 if(gameManager.GetNumberIncorrect() == 0)
                 {
-                    unavailable[2] = true;
-                    powers[2].color = new Color(0.5f, 0.5f, 0.5f, 1);
+                    unavailable[0] = true;
+                    powers[0].color = new Color(0.5f, 0.5f, 0.5f, 1);
                 }
             }
             else
@@ -85,6 +90,9 @@ public class PowersetController : MonoBehaviour
     {
         if (!unavailable[1] && gameManager.GetPowerAmount(1) > 0 && gameManager.GetPowerActive(1))
         {
+            aus.clip = powerSound;
+            aus.Play();
+
             //add time
             TimeManager tm = gameManager.GetTimeManager();
             tm.AddTime(10f);
@@ -105,6 +113,9 @@ public class PowersetController : MonoBehaviour
     {
         if (!unavailable[0] && gameManager.GetPowerAmount(0) > 0 && gameManager.GetPowerActive(0) && gameManager.GetNumberIncorrect() > 0)
         {
+            aus.clip = powerSound;
+            aus.Play();
+
             //repeat question
             gameManager.RetryQuestion();
 
@@ -123,6 +134,10 @@ public class PowersetController : MonoBehaviour
     {
         if (!unavailable[2] && gameManager.GetPowerAmount(2) > 0 && gameManager.GetPowerActive(2))
         {
+
+            aus.clip = powerSound;
+            aus.Play();
+
             //mark an incorrect answer
             gameManager.MarkIncorrect();
 
