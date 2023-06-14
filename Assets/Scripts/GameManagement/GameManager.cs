@@ -178,11 +178,8 @@ public class GameManager : MonoBehaviour
             }
             */
             
-            
-            
             currentQuestion = qm.GetPregunta(0);
             tm = gameObject.AddComponent<TimeManager>();
-            LoadNextGame();
         } else
         {
             Debug.Log("No hay preguntas");
@@ -358,7 +355,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void LoadNextGame()
+    public void LoadNextGame()
     {
         OpenMinigame(currMinigames[currentGame]);
     }

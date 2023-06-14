@@ -12,6 +12,7 @@ public class ExamPreview : MonoBehaviour
 {
     [SerializeField] TMP_Text tituloTexto;
     [SerializeField] List<Button> etiquetas;
+    SceneController sc;
 
 
     private void Awake()
@@ -27,9 +28,11 @@ public class ExamPreview : MonoBehaviour
     }
 
 
+
     private void Start()
     {
         tituloTexto.text = PlayerPrefs.GetString("TituloExamen");
+        sc = FindObjectOfType<SceneController>();
     }
 
     IEnumerator GetEtiquetas()
@@ -79,5 +82,6 @@ public class ExamPreview : MonoBehaviour
     public void LoadGame()
     {
         FindObjectOfType<GameManager>().PrepareGame();
+        sc.CambiaEscena("Store");
     }
 }

@@ -28,7 +28,6 @@ public class PowersetController : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
 
-        totalPoderes = gameManager.GetTotalPowers();
         unavailable = new bool[totalPoderes];
 
         for (int i = 0; i < totalPoderes; i++)
